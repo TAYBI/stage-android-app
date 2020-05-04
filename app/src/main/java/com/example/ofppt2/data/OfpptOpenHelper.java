@@ -1,4 +1,4 @@
-package com.example.ofppt2;
+package com.example.ofppt2.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,8 +21,8 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         db.execSQL(OfpptDatabaseContract.UserssEntry.SQL_CREATE_TABLE);
 
         OfpptDataWorker worker = new OfpptDataWorker(db);
-        worker.insertConditionDebouches();
-        worker.insertModules();
+//        worker.insertConditionDebouches();
+//        worker.insertModules();
     }
 
     @Override
