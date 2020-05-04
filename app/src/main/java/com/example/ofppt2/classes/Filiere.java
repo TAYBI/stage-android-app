@@ -1,4 +1,4 @@
-package com.example.ofppt.classes;
+package com.example.ofppt2.classes;
 
 public class Filiere {
     private String numModule;

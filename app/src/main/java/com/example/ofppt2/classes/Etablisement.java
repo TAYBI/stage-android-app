@@ -1,8 +1,8 @@
-package com.example.ofppt.classes;
+package com.example.ofppt2.classes;
 
 public class Etablisement {
-    private  String name;
-    private  String filieres;
+    private String name;
+    private String filieres;
 
     public Etablisement(String name, String filieres) {
         this.name = name;

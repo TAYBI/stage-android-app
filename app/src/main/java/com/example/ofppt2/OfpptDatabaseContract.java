@@ -1,4 +1,4 @@
-package com.example.ofppt;
+package com.example.ofppt2;
 
 import android.provider.BaseColumns;
 
