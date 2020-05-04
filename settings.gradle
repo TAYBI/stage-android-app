@@ -1,0 +1,2 @@
+rootProject.name='OFPPT2'
+include ':app'
