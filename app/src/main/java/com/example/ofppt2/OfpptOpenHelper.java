@@ -16,8 +16,8 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(OfpptDatabaseContract.ConditionsEntry.SQL_CREATE_TABLE);
-        db.execSQL(OfpptDatabaseContract.ModulesEntry.SQL_CREATE_TABLE);
+        db.execSQL(OfpptDatabaseContract.FiliereEntry.SQL_CREATE_TABLE);
+        db.execSQL(OfpptDatabaseContract.SecteurEntry.SQL_CREATE_TABLE);
         db.execSQL(OfpptDatabaseContract.UserssEntry.SQL_CREATE_TABLE);
 
         OfpptDataWorker worker = new OfpptDataWorker(db);
