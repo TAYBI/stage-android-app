@@ -28,7 +28,7 @@ public class OfpptDataWorker {
         insertSecteur("Fabrication Mécanique","");
         insertSecteur("Froid et Génie Thermique","");
         insertSecteur("Hôtellerie et Tourisme","");
-        insertSecteur("Nouvelles Technologies de l’Informatique et de la Communication","");
+        insertSecteur("NTIC","");
         insertSecteur("Offshoring","");
         insertSecteur("Paramédical","");
         insertSecteur("Réparation des Engins à Moteurs","");
