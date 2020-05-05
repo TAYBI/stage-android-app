@@ -151,7 +151,7 @@
             android:textSize="@dimen/text_mud" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spinner_niveau"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
@@ -183,7 +183,7 @@
             android:textSize="@dimen/text_mud" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/spinner_secteur"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
