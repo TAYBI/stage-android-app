@@ -12,12 +12,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String niveau = "Technicien Spécialisé,Technicien,Qualification,Spécialisation";
-    private String secteur = "Bâtiment et Travaux Publics,Froid et Génie Thermique," +
-                            "Réparation des Engins à Moteurs," +
-                            "Génie Electrique,Plasturgie,Administration Gestion et Commerce," +
-                            "Construction Métallique,Transport et Logistique,Textile Habillement,"+
-                            "Action Sociale,NTIC,Arts Graphiques,Aéronautique";
+    private String niveau = "Technicien Spécialisé";
+//    private String secteur = "Bâtiment et Travaux Publics,Froid et Génie Thermique," +
+//                            "Réparation des Engins à Moteurs," +
+//                            "Génie Electrique,Plasturgie,Administration Gestion et Commerce," +
+//                            "Construction Métallique,Transport et Logistique,Textile Habillement,"+
+//                            "Action Sociale,NTIC,Arts Graphiques,Aéronautique";
 
             @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         Spinner mSpinnerNiveau = (Spinner)findViewById(R.id.spinner_niveau);
         fillSpinner(mSpinnerNiveau, stringToList(niveau));
 
-        Spinner mSpinnerSecteur = (Spinner)findViewById(R.id.spinner_secteur);
-        fillSpinner(mSpinnerSecteur, stringToList(secteur));
+//        Spinner mSpinnerSecteur = (Spinner)findViewById(R.id.spinner_secteur);
+//        fillSpinner(mSpinnerSecteur, stringToList(secteur));
     }
 
     private List<String> stringToList(String s) {

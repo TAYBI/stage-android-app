@@ -25,6 +25,18 @@ public final class OfpptDatabaseContract {
                         COLUMN_CONDITIONS + " TEXT NOT NULL )";
     }
 
+    public static final class NiveauEntry implements BaseColumns {
+        public static final String TABLE_NAME = "niveaux";
+        public static final String COLUMN_NAME = "name";
+        public static final String COLUMN_SECTEURS = "secteurs";
+
+        public static final String SQL_CREATE_TABLE =
+                "CREATE TABLE " + TABLE_NAME + " (" +
+                        _ID + " INTEGER PRIMARY KEY, " +
+                        COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
+                        COLUMN_SECTEURS + " TEXT NOT NULL )" ;
+    }
+
     public static final class SecteurEntry implements BaseColumns {
         public static final String TABLE_NAME = "secteurs";
         public static final String COLUMN_NAME = "name";
@@ -38,8 +50,8 @@ public final class OfpptDatabaseContract {
     }
 
 
-    public static final class EtablisementEntry implements BaseColumns {
-        public static final String TABLE_NAME = "etablisemets";
+    public static final class EtablissementEntry implements BaseColumns {
+        public static final String TABLE_NAME = "etablissemets";
         public static final String COLUMN_NAME = "name";
         public static final String COLUMN_FILIERES = "filieres";
 

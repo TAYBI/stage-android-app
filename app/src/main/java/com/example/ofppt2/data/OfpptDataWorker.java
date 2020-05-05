@@ -13,28 +13,35 @@ public class OfpptDataWorker {
         Db = db;
     }
 
+    public void insertNivaux(){
+        insertNiveau("Technicien Spécialisé","Action Sociale,Administration Gestion et Commerce,Construction Métallique,Fabrication Mécanique,Froid et Génie Thermique,Génie Electrique,NTIC,Réparation des Engins à Moteurs,Arts Graphiques,Aéronautique,Plasturgie");
+        insertNiveau("Technicien","Administration Gestion et Commerce,Construction Métallique,Froid et Génie Thermique,Génie Electrique,Réparation des Engins à Moteurs,Transport et Logistique,Textile Habillement,Plasturgie");
+        insertNiveau("Qualification","Froid et Génie Thermique,Réparation des Engins à Moteurs,Génie Electrique,Plasturgie");
+        insertNiveau("Spécialisation","Bâtiment et Travaux Publics");
+    }
+
     public void insertSecteurs(){
-        insertSecteur("Action Sociale","");
-        insertSecteur("Administration Gestion et Commerce","");
-        insertSecteur("Aéronautique","");
-        insertSecteur("Agroalimentaire","");
-        insertSecteur("Arts Graphiques","");
-        insertSecteur("Arts Traditionnels","");
-        insertSecteur("Audiovisuel","");
-        insertSecteur("Bâtiment et Travaux Public","");
-        insertSecteur("Construction Métallique","");
-        insertSecteur("Cuir","");
-        insertSecteur("Electronique et Electrotechnique","");
-        insertSecteur("Fabrication Mécanique","");
-        insertSecteur("Froid et Génie Thermique","");
-        insertSecteur("Hôtellerie et Tourisme","");
-        insertSecteur("NTIC","");
-        insertSecteur("Offshoring","");
-        insertSecteur("Paramédical","");
-        insertSecteur("Réparation des Engins à Moteurs","");
-        insertSecteur("Textile Habillement","");
-        insertSecteur("Transport et Logistique","");
-        insertSecteur("Sports Equestres","");
+        insertSecteur("Bâtiment et Travaux Public","CENTRE DE FORMATION OULED OUJIH");
+        insertSecteur("Froid et Génie Thermique","ISTA MAAMORA");
+        insertSecteur("NTIC","ISTA MAAMORA");
+        insertSecteur("Réparation des Engins à Moteurs","ISTA MAAMORA INDUSTRIEL,Centre de Formation Dans les Métiers de l'Automobile de Kenitra");
+        insertSecteur("Génie Electrique","CENTRE DE FORMATION OULED OUJIH,Centre de Formation Dans les Métiers de l'Automobile de Kenitra,ISTA MAAMORA");
+        insertSecteur("Plasturgie","Centre de Formation Dans les Métiers de l'Automobile de Kenitra");
+        insertSecteur("Administration Gestion et Commerce","ISTA MAAMORA,CENTRE DE FORMATION OULED OUJIH");
+        insertSecteur("Construction Métallique","ISTA MAAMORA");
+        insertSecteur("Transport et Logistique","CENTRE DE FORMATION OULED OUJIH");
+        insertSecteur("Textile Habillement","Centre de Formation Dans les Métiers de l'Automobile de Kenitra");
+        insertSecteur("Action Sociale","ISTA MAAMORA");
+        insertSecteur("Fabrication Mécanique","ISTA MAAMORA");
+        insertSecteur("Arts Graphiques","CENTRE DE FORMATION OULED OUJIH");
+        insertSecteur("Aéronautique","Centre de Formation Dans les Métiers de l'Automobile de Kenitra");
+    }
+
+    public void insertEtablissements(){
+        insertEtablissement("CENTRE DE FORMATION OULED OUJIH","Menuiserie Aluminium,Electricité d'Entretien Industriel,Technicien Comptable d'Entreprises,Technicien Logistique,Technicien Spécialisé en Commerce,Technicien Spécialisé en Gestion des Entreprises,Infographie");
+        insertEtablissement("ISTA MAAMORA","Monteur Dépanneur Frigoriste,Agent Technique de Vente,Technicien Comptable d'Entreprises,Technicien en Construction Métallique,Technicien en Froid Commercial et Climatisation,Technicien en Electricité de Maintenance Industrielle,Educateur Spécialisé en Petite Enfance,Technicien Spécialisé en Finance et Comptabilité,Techniques de Secrétariat de Direction,Technicien Spécialisé en Commerce,Technicien Spécialisé en Gestion des Entreprises,Technicien Spécialisé Bureau d'Etude en Construction Métallique,Technicien Spécialisé de Méthodes en Fabrication Mécanique,Technicien Spécialisé en Génie Climatique,Automatisation et Instrumentation Industrielle,Electromécanique des Systèmes Automatisées,Techniques de Développement Informatique,Techniques des Réseaux Informatiques");
+        insertEtablissement("ISTA MAAMORA INDUSTRIEL","Carrosserie Peinture Automobile,Réparateur de Véhicules Automobiles,Technicien en Réparation des Engins à Moteur (Option: Automobile),Technico-Commercial en Vente de Véhicules et Pièces de Rechange,Technicien spécialisé en Diagnostic et Electronique Embarquée");
+        insertEtablissement("Centre de Formation Dans les Métiers de l'Automobile de Kenitra","Electromécanique,Conducteur de Machines en Plasturgie,Technicien en Fabrication Mécanique option Montage / Ajustage Outillage de presse,Technicien en Peinture Automobile,Maintenance de Matériel de Confection,Technicien en Construction Métallique,Monteur Régleur en Plasturgie,TS Traitement de surface,Technicien Spécialisé Bureau d’Etudes en Automobile,Maintenance des Machines Outils et Autres Machines de Production Automatisée,Maintenance des Machines et Outillage en Plasturgie,Technicien Spécialisé en Production et Qualité en Automobile,Technicien Spécialisé Bureau d'Etude en Construction Métallique,Usinage sur MOCN option METHODE FAO Outillage de presse,Usinage sur MOCN option USINAGE Outillage de presse,Technicien spécialisé en Diagnostic et Electronique Embarquée,Mécatronique");
     }
 
     public void insertUser(String cin,String name, String lname, String date, String niveau, String secteure, String etablisement, String filiere){
@@ -51,20 +58,28 @@ public class OfpptDataWorker {
         long newRowId = Db.insert(UserssEntry.TABLE_NAME, null, values);
     }
 
-    public void insertSecteur(String name, String etablisements){
+    public void insertNiveau(String name, String secteurs){
+        ContentValues values = new ContentValues();
+        values.put(NiveauEntry.COLUMN_NAME, name);
+        values.put(NiveauEntry.COLUMN_SECTEURS, secteurs);
+
+        long newRowId = Db.insert(NiveauEntry.TABLE_NAME, null, values);
+    }
+
+    public void insertSecteur(String name, String etablissements){
         ContentValues values = new ContentValues();
         values.put(SecteurEntry.COLUMN_NAME, name);
-        values.put(SecteurEntry.COLUMN_ETABLISEMENTS, etablisements);
+        values.put(SecteurEntry.COLUMN_ETABLISEMENTS, etablissements);
 
         long newRowId = Db.insert(SecteurEntry.TABLE_NAME, null, values);
     }
 
-    public void insertEtablisement(String name, String filieres){
+    public void insertEtablissement(String name, String filieres){
         ContentValues values = new ContentValues();
-        values.put(EtablisementEntry.COLUMN_NAME, name);
-        values.put(EtablisementEntry.COLUMN_FILIERES, filieres);
+        values.put(EtablissementEntry.COLUMN_NAME, name);
+        values.put(EtablissementEntry.COLUMN_FILIERES, filieres);
 
-        long newRowId = Db.insert(EtablisementEntry.TABLE_NAME, null, values);
+        long newRowId = Db.insert(EtablissementEntry.TABLE_NAME, null, values);
     }
 
     public void insertFiliere(String num_modules, String nom_modules, String nbr_horaire, String details, String debouches, String conditions){
