@@ -51,17 +51,17 @@ public final class OfpptDatabaseContract {
     }
 
 
-    public static final class EtablissementEntry implements BaseColumns {
-        public static final String TABLE_NAME = "etablissemets";
-        public static final String COLUMN_NAME = "name";
-        public static final String COLUMN_FILIERES = "filieres";
-
-        public static final String SQL_CREATE_TABLE =
-                "CREATE TABLE " + TABLE_NAME + " (" +
-                        _ID + " INTEGER PRIMARY KEY, " +
-                        COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
-                        COLUMN_FILIERES + " TEXT NOT NULL )" ;
-    }
+//    public static final class EtablissementEntry implements BaseColumns {
+//        public static final String TABLE_NAME = "etablissemets";
+//        public static final String COLUMN_NAME = "name";
+//        public static final String COLUMN_FILIERES = "filieres";
+//
+//        public static final String SQL_CREATE_TABLE =
+//                "CREATE TABLE " + TABLE_NAME + " (" +
+//                        _ID + " INTEGER PRIMARY KEY, " +
+//                        COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
+//                        COLUMN_FILIERES + " TEXT NOT NULL )" ;
+//    }
 
     public static final class UserssEntry implements BaseColumns {
         public static final String TABLE_NAME = "users";

@@ -8,11 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.ofppt2.data.OfpptOpenHelper;
+
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
 
+    OfpptOpenHelper db;
     private String niveaFormation;
     private String niveauScolaire = "bac,niveau bac";
 
@@ -27,6 +30,9 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        db = new OfpptOpenHelper(this);
+
 
         final Spinner mSpinnerNiveauFormation = (Spinner)findViewById(R.id.spinner_niveau_formation);
 

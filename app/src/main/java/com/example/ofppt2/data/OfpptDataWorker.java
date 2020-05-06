@@ -74,13 +74,13 @@ public class OfpptDataWorker {
         long newRowId = Db.insert(SecteurEntry.TABLE_NAME, null, values);
     }
 
-    public void insertEtablissement(String name, String filieres){
-        ContentValues values = new ContentValues();
-        values.put(EtablissementEntry.COLUMN_NAME, name);
-        values.put(EtablissementEntry.COLUMN_FILIERES, filieres);
-
-        long newRowId = Db.insert(EtablissementEntry.TABLE_NAME, null, values);
-    }
+//    public void insertEtablissement(String name, String filieres){
+//        ContentValues values = new ContentValues();
+//        values.put(EtablissementEntry.COLUMN_NAME, name);
+//        values.put(EtablissementEntry.COLUMN_FILIERES, filieres);
+//
+//        long newRowId = Db.insert(EtablissementEntry.TABLE_NAME, null, values);
+//    }
 
     public void insertFiliere(String num_modules, String nom_modules, String nbr_horaire, String details, String debouches, String conditions){
         ContentValues values = new ContentValues();
