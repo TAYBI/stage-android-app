@@ -7,6 +7,7 @@ public final class OfpptDatabaseContract {
 
     public static final class FiliereEntry implements BaseColumns {
         public static final String TABLE_NAME = "filiere";
+//        public static final String COLUMN_ETABISSEMENT = "conditions";
         public static final String COLUMN_NUM_MODULES = "num_module";
         public static final String COLUMN_NOM_MODULES = "nom_module";
         public static final String COLUMN_NBR_HORAIRES = "nbr_horaire";
@@ -40,13 +41,13 @@ public final class OfpptDatabaseContract {
     public static final class SecteurEntry implements BaseColumns {
         public static final String TABLE_NAME = "secteurs";
         public static final String COLUMN_NAME = "name";
-        public static final String COLUMN_ETABLISEMENTS = "etablisements";
+        public static final String COLUMN_FILIERES = "filieres";
 
         public static final String SQL_CREATE_TABLE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY, " +
                         COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
-                        COLUMN_ETABLISEMENTS + " TEXT NOT NULL )" ;
+                        COLUMN_FILIERES + " TEXT NOT NULL )" ;
     }
 
 

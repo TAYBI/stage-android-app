@@ -146,12 +146,12 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="10dp"
-            android:text="Niveau: "
+            android:text="Niveau scolaire: "
             android:textColor="@color/dark"
             android:textSize="@dimen/text_mud" />
 
         <Spinner
-            android:id="@+id/spinner_niveau"
+            android:id="@+id/spinner_niveau_scolaire"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
@@ -178,12 +178,12 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="10dp"
-            android:text="Secteur: "
+            android:text="Niveau de formation: "
             android:textColor="@color/dark"
             android:textSize="@dimen/text_mud" />
 
         <Spinner
-            android:id="@+id/spinner_secteur"
+            android:id="@+id/spinner_niveau_formation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
@@ -215,7 +215,7 @@
             android:textSize="@dimen/text_mud" />
 
         <Spinner
-            android:id="@+id/spinner5"
+            android:id="@+id/spinner_formation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
@@ -242,12 +242,12 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="10dp"
-            android:text="Etablisement: "
+            android:text="Secteur: "
             android:textColor="@color/dark"
             android:textSize="@dimen/text_mud" />
 
         <Spinner
-            android:id="@+id/spinner4"
+            android:id="@+id/spinner_secteur"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />

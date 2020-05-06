@@ -23,7 +23,6 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         OfpptDataWorker worker = new OfpptDataWorker(db);
         worker.insertNivaux();
         worker.insertSecteurs();
-        worker.insertEtablissements();
     }
 
     @Override

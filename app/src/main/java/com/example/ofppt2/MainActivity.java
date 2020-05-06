@@ -2,17 +2,15 @@ package com.example.ofppt2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String niveau = "Technicien Spécialisé";
+    private String niveau = "Technicien Spécialisé,Technicien,Qualification,Spécialisation";
 //    private String secteur = "Bâtiment et Travaux Publics,Froid et Génie Thermique," +
 //                            "Réparation des Engins à Moteurs," +
 //                            "Génie Electrique,Plasturgie,Administration Gestion et Commerce," +
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Spinner mSpinnerNiveau = (Spinner)findViewById(R.id.spinner_niveau);
+        Spinner mSpinnerNiveau = (Spinner)findViewById(R.id.spinner_niveau_scolaire);
         fillSpinner(mSpinnerNiveau, stringToList(niveau));
 
 //        Spinner mSpinnerSecteur = (Spinner)findViewById(R.id.spinner_secteur);
