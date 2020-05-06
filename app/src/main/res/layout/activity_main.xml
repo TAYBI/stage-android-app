@@ -215,7 +215,7 @@
             android:textSize="@dimen/text_mud" />
 
         <Spinner
-            android:id="@+id/spinner_formation"
+            android:id="@+id/spinner_filiere"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />

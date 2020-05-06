@@ -1,6 +1,7 @@
 package com.example.ofppt2.data;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
@@ -30,6 +31,11 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS " + NiveauEntry.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + SecteurEntry.TABLE_NAME);
 
+        onCreate(db);
     }
+
+//    public Cursor get
 }

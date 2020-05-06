@@ -34,7 +34,7 @@ public final class OfpptDatabaseContract {
         public static final String SQL_CREATE_TABLE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY, " +
-                        COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
+                        COLUMN_NAME + " TEXT NOT NULL, " +
                         COLUMN_SECTEURS + " TEXT NOT NULL )" ;
     }
 
@@ -46,7 +46,7 @@ public final class OfpptDatabaseContract {
         public static final String SQL_CREATE_TABLE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY, " +
-                        COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
+                        COLUMN_NAME + " TEXT NOT NULL, " +
                         COLUMN_FILIERES + " TEXT NOT NULL )" ;
     }
 

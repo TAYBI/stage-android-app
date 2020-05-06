@@ -16,9 +16,9 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity{
 
     OfpptOpenHelper db;
+    Spinner mSpinnerNiveauFormation, mSpinnerNiveauScolaire, mSpinnerSecteur, mSpinnerFiliere;
     private String niveaFormation;
     private String niveauScolaire = "bac,niveau bac";
-
 
 //    private String secteur = "Bâtiment et Travaux Publics,Froid et Génie Thermique," +
 //                            "Réparation des Engins à Moteurs," +
@@ -33,11 +33,17 @@ public class MainActivity extends AppCompatActivity{
 
         db = new OfpptOpenHelper(this);
 
+        mSpinnerNiveauFormation = (Spinner)findViewById(R.id.spinner_niveau_formation);
+        mSpinnerSecteur = (Spinner)findViewById(R.id.spinner_secteur);
+        mSpinnerFiliere = (Spinner)findViewById(R.id.spinner_filiere);
 
-        final Spinner mSpinnerNiveauFormation = (Spinner)findViewById(R.id.spinner_niveau_formation);
-
-        final Spinner mSpinnerNiveauScolaire = (Spinner)findViewById(R.id.spinner_niveau_scolaire);
+        mSpinnerNiveauScolaire = (Spinner)findViewById(R.id.spinner_niveau_scolaire);
         fillSpinner(mSpinnerNiveauScolaire, stringToList(niveauScolaire));
+
+        load_Niveau_Formation_ParNiveau_Scolaire();
+    }
+
+    private void load_Niveau_Formation_ParNiveau_Scolaire() {
         mSpinnerNiveauScolaire.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
