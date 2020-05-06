@@ -2,15 +2,21 @@ package com.example.ofppt2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
-    private String niveau = "Technicien Spécialisé,Technicien,Qualification,Spécialisation";
+    private String niveaFormation;
+    private String niveauScolaire = "bac,niveau bac";
+
+
 //    private String secteur = "Bâtiment et Travaux Publics,Froid et Génie Thermique," +
 //                            "Réparation des Engins à Moteurs," +
 //                            "Génie Electrique,Plasturgie,Administration Gestion et Commerce," +
@@ -22,11 +28,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Spinner mSpinnerNiveau = (Spinner)findViewById(R.id.spinner_niveau_scolaire);
-        fillSpinner(mSpinnerNiveau, stringToList(niveau));
+        final Spinner mSpinnerNiveauFormation = (Spinner)findViewById(R.id.spinner_niveau_formation);
 
-//        Spinner mSpinnerSecteur = (Spinner)findViewById(R.id.spinner_secteur);
-//        fillSpinner(mSpinnerSecteur, stringToList(secteur));
+        final Spinner mSpinnerNiveauScolaire = (Spinner)findViewById(R.id.spinner_niveau_scolaire);
+        fillSpinner(mSpinnerNiveauScolaire, stringToList(niveauScolaire));
+        mSpinnerNiveauScolaire.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String value  = parent.getItemAtPosition(position).toString();
+
+                if (value.equals("bac"))
+                    niveaFormation = "Technicien Spécialisé,Technicien,Qualification,Spécialisation";
+                else if (value.equals("niveau bac"))
+                    niveaFormation = "Technicien,Qualification,Spécialisation";
+
+                fillSpinner(mSpinnerNiveauFormation, stringToList(niveaFormation));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private List<String> stringToList(String s) {
