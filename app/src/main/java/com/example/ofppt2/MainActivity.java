@@ -1,5 +1,6 @@
 package com.example.ofppt2;
 
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
