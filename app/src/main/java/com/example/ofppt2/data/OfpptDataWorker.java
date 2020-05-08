@@ -21,7 +21,7 @@ public class OfpptDataWorker {
     }
 
     public void insertSecteurs(){
-        insertSecteur("Bâtiment et Travaux Public","Menuiserie Aluminium");
+        insertSecteur("Bâtiment et Travaux Publics","Menuiserie Aluminium");
         insertSecteur("Froid et Génie Thermique","Monteur Dépanneur Frigoriste,Technicien en Froid Commercial et Climatisation,Technicien Spécialisé en Génie Climatique");
         insertSecteur("Réparation des Engins à Moteurs","Carrosserie Peinture Automobile,Réparateur de Véhicules Automobiles,Technicien en Réparation des Engins à Moteur (Option: Automobile),Technicien en Fabrication Mécanique option Montage / Ajustage Outillage de presse,Technicien en Peinture Automobile,Technico-Commercial en Vente de Véhicules et Pièces de Rechange,Technicien spécialisé en Diagnostic et Electronique Embarquée,Technicien Spécialisé Bureau d’Etudes en Automobile,Technicien Spécialisé en Production et Qualité en Automobile,Usinage sur MOCN option METHODE FAO Outillage de presse,Usinage sur MOCN option USINAGE Outillage de presse");
         insertSecteur("Génie Electrique","Electricité d'Entretien Industriel,Electromécanique,Technicien en Electricité de Maintenance Industrielle,Automatisation et Instrumentation Industrielle,Electromécanique des Systèmes Automatisées,Maintenance des Machines Outils et Autres Machines de Production Automatisée,Mécatronique");

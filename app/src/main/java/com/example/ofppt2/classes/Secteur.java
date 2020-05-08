@@ -4,9 +4,9 @@ public class Secteur {
     private String name;
     private String filieres;
 
-    public Secteur(String name, String etablisements) {
+    public Secteur(String name, String filieres) {
         this.name = name;
-        this.filieres = etablisements;
+        this.filieres = filieres;
     }
 
     public String getName() {
