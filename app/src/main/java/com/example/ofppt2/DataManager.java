@@ -36,7 +36,7 @@ public class DataManager {
 
     public Filiere getFiliere(String filiereName) {
         for(Filiere filiere: Filieres){
-            if (filiereName.equals(filiere.getNomModule())){
+            if (filiereName.equals(filiere.getNumModule())){
                 return filiere;
             }
         }

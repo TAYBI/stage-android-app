@@ -21,7 +21,8 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(NiveauEntry.SQL_CREATE_TABLE);
         db.execSQL(SecteurEntry.SQL_CREATE_TABLE);
-//        db.execSQL(UserssEntry.SQL_CREATE_TABLE);
+        db.execSQL(FiliereEntry.SQL_CREATE_TABLE);
+        db.execSQL(UserssEntry.SQL_CREATE_TABLE);
 
         OfpptDataWorker worker = new OfpptDataWorker(db);
         worker.insertNivaux();
