@@ -15,7 +15,6 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
 
     public OfpptOpenHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        SQLiteDatabase db = this.getReadableDatabase();
     }
 
     @Override
@@ -37,5 +36,15 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-//    public Cursor get
+    public Cursor getAllNiveaux(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM " + NiveauEntry.TABLE_NAME, null);
+        return  res;
+    }
+
+    public Cursor getAllSecteurs(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM " + SecteurEntry.TABLE_NAME, null);
+        return  res;
+    }
 }

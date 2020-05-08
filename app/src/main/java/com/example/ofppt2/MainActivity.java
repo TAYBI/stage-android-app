@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity{
 
     OfpptOpenHelper db;
     Spinner mSpinnerNiveauFormation, mSpinnerNiveauScolaire, mSpinnerSecteur, mSpinnerFiliere;
-    private String niveaFormation;
+
+    private String niveaFormation, secteur, filiere;
     private String niveauScolaire = "bac,niveau bac";
 
 //    private String secteur = "Bâtiment et Travaux Publics,Froid et Génie Thermique," +
@@ -41,6 +42,21 @@ public class MainActivity extends AppCompatActivity{
         fillSpinner(mSpinnerNiveauScolaire, stringToList(niveauScolaire));
 
         load_Niveau_Formation_ParNiveau_Scolaire();
+        load_Secteur_Par_Niveau_Formation();
+    }
+
+    private void load_Secteur_Par_Niveau_Formation() {
+        mSpinnerNiveauFormation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private void load_Niveau_Formation_ParNiveau_Scolaire() {
@@ -74,4 +90,5 @@ public class MainActivity extends AppCompatActivity{
 
         spinner.setAdapter(adapter);
     }
+
 }
