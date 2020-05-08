@@ -7,15 +7,17 @@ public class Filiere {
     private String details;
     private String debouches;
     private String conditions;
+    private String profile_de_formation;
     private String etablissement;
 
-    public Filiere(String numModule, String nomModule, String num_Horaire, String details, String debouches, String conditions, String etablissement) {
+    public Filiere(String numModule, String nomModule, String num_Horaire, String details, String debouches, String conditions, String profile_de_formation, String etablissement) {
         this.numModule = numModule;
         this.nomModule = nomModule;
         this.num_Horaire = num_Horaire;
         this.details = details;
         this.debouches = debouches;
         this.conditions = conditions;
+        this.profile_de_formation = profile_de_formation;
         this.etablissement = etablissement;
     }
 
@@ -47,8 +49,8 @@ public class Filiere {
         return etablissement;
     }
 
-    public void setEtablissement(String etablissement) {
-        this.etablissement = etablissement;
+    public String getProfile_de_formation() {
+        return profile_de_formation;
     }
 
     @Override
@@ -62,6 +64,7 @@ public class Filiere {
                 ", conditions='" + conditions + '\'' +
                 '}';
     }
+
 
 
 }
