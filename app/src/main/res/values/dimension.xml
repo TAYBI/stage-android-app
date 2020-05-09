@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_mud">15dp</dimen>
+    <dimen name="text_mud">15sp</dimen>
+    <dimen name="text_big">17sp</dimen>
+    <dimen name="text_xbig">20sp</dimen>
 </resources>

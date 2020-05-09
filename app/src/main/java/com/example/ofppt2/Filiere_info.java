@@ -9,7 +9,7 @@ import com.example.ofppt2.classes.Filiere;
 public class Filiere_info extends AppCompatActivity {
 
     Filiere filiere;
-    TextView title;
+    TextView title, conditions, debouches, profile_de_formation, details;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,17 @@ public class Filiere_info extends AppCompatActivity {
         setContentView(R.layout.activity_filiere_info);
 
         filiere = getIntent().getParcelableExtra ("Filiere");
+
         title = (TextView) findViewById(R.id.title);
+        conditions = (TextView) findViewById(R.id.conditions);
+        debouches = (TextView) findViewById(R.id.debouches);
+        profile_de_formation = (TextView) findViewById(R.id.profile_formation);
+        details = (TextView) findViewById(R.id.details);
+
         title.setText(filiere.getName());
+        details.setText(filiere.getDetails());
+        conditions.setText(filiere.getConditions());
+        profile_de_formation.setText(filiere.getProfile_de_formation());
+        debouches.setText(filiere.getDebouches());
     }
 }
