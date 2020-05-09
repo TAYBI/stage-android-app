@@ -71,16 +71,91 @@ public class OfpptDataWorker {
                         " \u23FA Assembler et Intégrer des composants logiciels\n" +
                         " \u23FA Réaliser des tests unitaires et tests d’intégration\n" +
                         " \u23FA Participer à la mise en exploitation et au support technique de l’application","ISTA MAAMORA");
+//        insertFiliere("Menuiserie Aluminium","","","","","","","","");
+//        insertFiliere("Techniques de Développement Informatique","","","","","","","","");
+//        insertFiliere("Monteur Dépanneur Frigoriste","","","","","","","","");
+//        insertFiliere("Carrosserie Peinture Automobile","","","","","","","","");
+//        insertFiliere("Réparateur de Véhicules Automobiles","","","","","","","","");
+//        insertFiliere("Electricité d'Entretien Industriel","","","","","","","","");
+//        insertFiliere("Electromécanique","","","","","","","","");
+//        insertFiliere("Conducteur de Machines en Plasturgie","","","","","","","","");
+//        insertFiliere("Agent Technique de Vente","","","","","","","","");
+//        insertFiliere("Technicien Comptable d'Entreprises","","","","","","","","");
+//        insertFiliere("Technicien en Construction Métallique","","","","","","","","");
+//        insertFiliere("Technicien en Froid Commercial et Climatisation","","","","","","","","");
+//        insertFiliere("Technicien en Electricité de Maintenance Industrielle","","","","","","","","");
+//        insertFiliere("Technicien en Réparation des Engins à Moteur (Option: Automobile)","","","","","","","","");
+//        insertFiliere("Technicien Logistique","","","","","","","","");
+//        insertFiliere("Technicien en Fabrication Mécanique option Montage / Ajustage Outillage de presse","","","","","","","","");
+//        insertFiliere("Technicien en Peinture Automobile","","","","","","","","");
+//        insertFiliere("Maintenance de Matériel de Confection","","","","","","","","");
+//        insertFiliere("Monteur Régleur en Plasturgie","","","","","","","","");
+//        insertFiliere("Educateur Spécialisé en Petite Enfance","","","","","","","","");
+//        insertFiliere("Technicien Spécialisé en Finance et Comptabilité","","","","","","","","");
+//        insertFiliere("Techniques de Secrétariat de Direction","","","","","","","","");
+//        insertFiliere("Technicien Spécialisé en Commerce","","","","","","","","");
+//        insertFiliere("Technicien Spécialisé en Gestion des Entreprises","","","","","","","","");
+//        insertFiliere("Technicien Spécialisé Bureau d'Etude en Construction Métallique ","","","","","","","","");
+//        insertFiliere("Technicien Spécialisé de Méthodes en Fabrication Mécanique","","","","","","","","");
+//        insertFiliere("Technicien Spécialisé en Génie Climatique","","","","","","","","");
+//        insertFiliere("Automatisation et Instrumentation Industrielle","","","","","","","","");
+//        insertFiliere("Electromécanique des Systèmes Automatisées","","","","","","","","");
+//        insertFiliere("Techniques des Réseaux Informatiques","","","","","","","","");
+//        insertFiliere("Technico-Commercial en Vente de Véhicules et Pièces de Rechange","","","","","","","","");
+//        insertFiliere("Technicien spécialisé en Diagnostic et Electronique Embarquée","","","","","","","","");
+//        insertFiliere("Infographie","","","","","","","","");
+//        insertFiliere("TS Traitement de surface","","","","","","","","");
+//        insertFiliere("Technicien Spécialisé Bureau d’Etudes en Automobile","","","","","","","","");
+//        insertFiliere("Maintenance des Machines Outils et Autres Machines de Production Automatisée","","","","","","","","");
+//        insertFiliere("Maintenance des Machines et Outillage en Plasturgie","","","","","","","","");
+//        insertFiliere("Technicien Spécialisé en Production et Qualité en Automobile","","","","","","","","");
+//        insertFiliere("Technicien Spécialisé Bureau d'Etude en Construction Métallique","","","","","","","","");
+//        insertFiliere("Usinage sur MOCN option METHODE FAO Outillage de presse","","","","","","","","");
+//        insertFiliere("Usinage sur MOCN option USINAGE Outillage de presse","","","","","","","","");
+//        insertFiliere("Mécatronique","","","","","","","","");
 
-
-
-
-
-
-
-
-
-
+//        "Menuiserie Aluminium "
+//        "Monteur Dépanneur Frigoriste "
+//        "Carrosserie Peinture Automobile "
+//        "Réparateur de Véhicules Automobiles "
+//        "Electricité d'Entretien Industriel "
+//        "Electromécanique"
+//        "Conducteur de Machines en Plasturgie"
+//        "Agent Technique de Vente "
+//        "Technicien Comptable d'Entreprises "
+//        "Technicien en Construction Métallique "
+//        "Technicien en Froid Commercial et Climatisation "
+//        "Technicien en Electricité de Maintenance Industrielle "
+//        "Technicien en Réparation des Engins à Moteur (Option: Automobile) "
+//        "Technicien Logistique "
+//        "Technicien en Fabrication Mécanique option Montage / Ajustage Outillage de presse"
+//        "Technicien en Peinture Automobile "
+//        "Maintenance de Matériel de Confection"
+//        "Monteur Régleur en Plasturgie "
+//        "Educateur Spécialisé en Petite Enfance"
+//        "Technicien Spécialisé en Finance et Comptabilité"
+//        "Techniques de Secrétariat de Direction "
+//        "Technicien Spécialisé en Commerce "
+//        "Technicien Spécialisé en Gestion des Entreprises "
+//        "Technicien Spécialisé Bureau d'Etude en Construction Métallique "
+//        "Technicien Spécialisé de Méthodes en Fabrication Mécanique "
+//        "Technicien Spécialisé en Génie Climatique "
+//        "Automatisation et Instrumentation Industrielle "
+//        "Electromécanique des Systèmes Automatisées "
+//        "Techniques de Développement Informatique "
+//        "Techniques des Réseaux Informatiques "
+//        "Technico-Commercial en Vente de Véhicules et Pièces de Rechange "
+//        "Technicien spécialisé en Diagnostic et Electronique Embarquée "
+//        "Infographie "
+//        "TS Traitement de surface "
+//        "Technicien Spécialisé Bureau d’Etudes en Automobile "
+//        "Maintenance des Machines Outils et Autres Machines de Production Automatisée"
+//        "Maintenance des Machines et Outillage en Plasturgie "
+//        "Technicien Spécialisé en Production et Qualité en Automobile"
+//        "Technicien Spécialisé Bureau d'Etude en Construction Métallique"
+//        "Usinage sur MOCN option METHODE FAO Outillage de presse"
+//        "Usinage sur MOCN option USINAGE Outillage de presse"
+//        "Mécatronique"
     }
 
     public void insertUser(String cin,String name, String lname, String date, String niveau, String secteure, String etablisement, String filiere){

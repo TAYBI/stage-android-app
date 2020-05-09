@@ -6,16 +6,16 @@ public final class OfpptDatabaseContract {
     private OfpptDatabaseContract() {}
 
     public static final class FiliereEntry implements BaseColumns {
-        public static final String TABLE_NAME = "filiere";
+        public static final String TABLE_NAME = "filieres";
         public static final String COLUMN_NAME = "name";
         public static final String COLUMN_NUM_MODULES = "num_module";
         public static final String COLUMN_NOM_MODULES = "nom_module";
         public static final String COLUMN_NBR_HORAIRES = "nbr_horaire";
         public static final String COLUMN_DETAILS = "details";
-        public static final String COLUMN_DEBOUCHES = "debouche";
+        public static final String COLUMN_DEBOUCHES = "debouches";
         public static final String COLUMN_CONDITIONS = "conditions";
         public static final String COLUMN_PROFILE_DE_FORMATION = "profile_de_formation";
-        public static final String COLUMN_ETABISSEMENT = "ettabilssement";
+        public static final String COLUMN_ETABISSEMENT = "etabilssement";
 
         public static final String SQL_CREATE_TABLE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
@@ -28,7 +28,7 @@ public final class OfpptDatabaseContract {
                         COLUMN_DEBOUCHES + " TEXT NOT NULL, " +
                         COLUMN_CONDITIONS + " TEXT NOT NULL, " +
                         COLUMN_PROFILE_DE_FORMATION + " TEXT NOT NULL, " +
-                        COLUMN_ETABISSEMENT + " TEXT NOT NULL) ";
+                        COLUMN_ETABISSEMENT + " TEXT NOT NULL )";
     }
 
     public static final class NiveauEntry implements BaseColumns {
@@ -54,19 +54,6 @@ public final class OfpptDatabaseContract {
                         COLUMN_NAME + " TEXT NOT NULL, " +
                         COLUMN_FILIERES + " TEXT NOT NULL )" ;
     }
-
-
-//    public static final class EtablissementEntry implements BaseColumns {
-//        public static final String TABLE_NAME = "etablissemets";
-//        public static final String COLUMN_NAME = "name";
-//        public static final String COLUMN_FILIERES = "filieres";
-//
-//        public static final String SQL_CREATE_TABLE =
-//                "CREATE TABLE " + TABLE_NAME + " (" +
-//                        _ID + " INTEGER PRIMARY KEY, " +
-//                        COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
-//                        COLUMN_FILIERES + " TEXT NOT NULL )" ;
-//    }
 
     public static final class UserssEntry implements BaseColumns {
         public static final String TABLE_NAME = "users";

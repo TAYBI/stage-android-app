@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.ofppt2.classes.Filiere;
 import com.example.ofppt2.classes.Niveau;
 import com.example.ofppt2.classes.Secteur;
 import com.example.ofppt2.data.OfpptOpenHelper;
@@ -22,15 +23,18 @@ public class MainActivity extends AppCompatActivity{
 
     DataManager dm;
     OfpptOpenHelper db;
+    Filiere filiere;
     Spinner mSpinnerNiveauFormation, mSpinnerNiveauScolaire, mSpinnerSecteur, mSpinnerFiliere;
-    private String niveaFormation, secteurs, filieres;
-    private String niveauScolaire = "bac,niveau bac";
+    private String niveaFormation, secteurs, filieres, niveauScolaire;
+//    private String niveauScolaire = "bac,niveau bac";
 
 
             @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        niveauScolaire = "bac,niveau bac";
 
         db = new OfpptOpenHelper(this);
         dm = new DataManager();
@@ -43,10 +47,25 @@ public class MainActivity extends AppCompatActivity{
 
         load_Niveaux_data();
         load_Secteurs_data();
+        load_Filieres_data();
 
         load_Niveau_Formation_ParNiveau_Scolaire();
         load_Secteur_Par_Niveau_Formation();
         load_Filiere_Par_Secteur();
+    }
+
+    private void load_Filieres_data() {
+        Cursor res =  db.getAllFilieres();
+        if(res.getCount() == 0){
+            showMessage("Error", "No data found");
+        }
+        while (res.moveToNext()){
+            Filiere filiereTemp = new Filiere(res.getString(1),res.getString(2),
+                    res.getString(3),res.getString(4),res.getString(5),
+                    res.getString(6),res.getString(7),res.getString(8),
+                    res.getString(9));
+            dm.setFiliere(filiereTemp);
+        }
     }
 
     private void load_Niveaux_data() {
@@ -58,7 +77,6 @@ public class MainActivity extends AppCompatActivity{
             Niveau niveau = new Niveau(res.getString(1), res.getString(2));
             dm.setNiveau(niveau);
         }
-
     }
 
 
