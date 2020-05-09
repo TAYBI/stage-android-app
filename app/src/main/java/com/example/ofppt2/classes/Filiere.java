@@ -1,6 +1,10 @@
 package com.example.ofppt2.classes;
 
-public class Filiere {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+
+public class Filiere implements Parcelable {
     private String name;
     private String numModule;
     private String nomModule;
@@ -22,6 +26,48 @@ public class Filiere {
         this.profile_de_formation = profile_de_formation;
         this.etablissement = etablissement;
     }
+
+    protected Filiere(Parcel in) {
+        name = in.readString();
+        numModule = in.readString();
+        nomModule = in.readString();
+        num_Horaire = in.readString();
+        details = in.readString();
+        debouches = in.readString();
+        conditions = in.readString();
+        profile_de_formation = in.readString();
+        etablissement = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(numModule);
+        dest.writeString(nomModule);
+        dest.writeString(num_Horaire);
+        dest.writeString(details);
+        dest.writeString(debouches);
+        dest.writeString(conditions);
+        dest.writeString(profile_de_formation);
+        dest.writeString(etablissement);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Filiere> CREATOR = new Creator<Filiere>() {
+        @Override
+        public Filiere createFromParcel(Parcel in) {
+            return new Filiere(in);
+        }
+
+        @Override
+        public Filiere[] newArray(int size) {
+            return new Filiere[size];
+        }
+    };
 
     public String getNumModule() {
         return numModule;

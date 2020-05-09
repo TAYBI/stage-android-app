@@ -17,6 +17,7 @@ import com.example.ofppt2.classes.Niveau;
 import com.example.ofppt2.classes.Secteur;
 import com.example.ofppt2.data.OfpptOpenHelper;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
@@ -61,7 +62,11 @@ public class MainActivity extends AppCompatActivity{
         valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Filiere_info.class));
+                Intent intent = new Intent(MainActivity.this, Filiere_info.class);
+                String filereString = mSpinnerFiliere.getSelectedItem().toString();
+                filiere = dm.getFiliere(filereString);
+                intent.putExtra("Filiere", filiere);
+                startActivity(intent);
             }
         });
     }
