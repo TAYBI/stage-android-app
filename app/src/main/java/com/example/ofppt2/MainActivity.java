@@ -1,5 +1,6 @@
 package com.example.ofppt2;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
@@ -8,8 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.example.ofppt2.classes.Filiere;
 import com.example.ofppt2.classes.Niveau;
@@ -25,9 +26,8 @@ public class MainActivity extends AppCompatActivity{
     OfpptOpenHelper db;
     Filiere filiere;
     Spinner mSpinnerNiveauFormation, mSpinnerNiveauScolaire, mSpinnerSecteur, mSpinnerFiliere;
+    Button valider;
     private String niveaFormation, secteurs, filieres, niveauScolaire;
-//    private String niveauScolaire = "bac,niveau bac";
-
 
             @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity{
         db = new OfpptOpenHelper(this);
         dm = new DataManager();
 
+        valider = (Button) findViewById(R.id.valider);
         mSpinnerNiveauFormation = (Spinner)findViewById(R.id.spinner_niveau_formation);
         mSpinnerSecteur = (Spinner)findViewById(R.id.spinner_secteur);
         mSpinnerFiliere = (Spinner)findViewById(R.id.spinner_filiere);
@@ -52,6 +53,17 @@ public class MainActivity extends AppCompatActivity{
         load_Niveau_Formation_ParNiveau_Scolaire();
         load_Secteur_Par_Niveau_Formation();
         load_Filiere_Par_Secteur();
+
+        handleValiderClick();
+    }
+
+    private void handleValiderClick() {
+        valider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Filiere_info.class));
+            }
+        });
     }
 
     private void load_Filieres_data() {
