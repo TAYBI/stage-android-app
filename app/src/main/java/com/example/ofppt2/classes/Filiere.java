@@ -1,6 +1,7 @@
 package com.example.ofppt2.classes;
 
 public class Filiere {
+    private String name;
     private String numModule;
     private String nomModule;
     private String num_Horaire;
@@ -10,7 +11,8 @@ public class Filiere {
     private String profile_de_formation;
     private String etablissement;
 
-    public Filiere(String numModule, String nomModule, String num_Horaire, String details, String debouches, String conditions, String profile_de_formation, String etablissement) {
+    public Filiere(String name, String numModule, String nomModule, String num_Horaire, String details, String debouches, String conditions, String profile_de_formation, String etablissement) {
+        this.name = name;
         this.numModule = numModule;
         this.nomModule = nomModule;
         this.num_Horaire = num_Horaire;
@@ -66,5 +68,7 @@ public class Filiere {
     }
 
 
-
+    public String getName() {
+        return name;
+    }
 }

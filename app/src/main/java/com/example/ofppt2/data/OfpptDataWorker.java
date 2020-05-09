@@ -37,6 +37,51 @@ public class OfpptDataWorker {
         insertSecteur("Aéronautique","TS Traitement de surface");
     }
 
+    public void insertFiliers(){
+        insertFiliere("Techniques de Développement Informatique","M1,M2,M3,M4,M4,M5,M6,M7,M8,M9,M10,M11,M12,M13,M14,M15,M16,M17,M18",
+                "Arabe,Communication écrite et orale,Anglais technique,Entrepreneurship,Métier et formation dans les NTIC,L'entreprise et son environnement, Gestion du temps et Production de documents,L'essentiel en technologies de l'information,Bureautique,Programmation structurée,Programmation événementielle et Orientée Objet,Analyse et conception orientée objet,Bases de données,Développement d'application client/serveur,Développement web côté client,Développement web côté serveur,Développement d'applications mobiles,Projet de fin de formation,Moyens de recherche d'emploi,Stage en entreprise",
+                "",
+                "Le \"Technicien Spécialisé en Développement Informatique\" est un professionnel en charge du développement et de la maintenance des applications informatiques. Il intervient, généralement pour le compte de Sociétés de Services et d’Ingénierie Informatiques, dans de nombreux domaines applicatifs (industrie, gestion, loisirs etc.). En amont du projet, le Technicien est réceptif aux attentes du client. Il étude avec précision un certain nombre de paramètres pour mener à bien sa mission il s'agit notamment du cahier des charges, des capacités de l’environnement technique, ainsi que des contraintes du système de production du client. En aval, Il participe à la mise en exploitation et au support technique de l’application",
+                "Après quelques années d’expériences réussies, le Technicien Spécialisé en Développement informatique peut évoluer vers diverses fonctions, selon ses aptitudes et motivations :\n\n \u23FA Expert technique : Concepteur, Réalisateur, Architecte logiciel, …\n \u23FA Expert métier : Analyste, Responsable d’application,…\n \u23FA Encadrement : Chef de projet.\n\nLa création d’une entreprise de services informatiques dans le domaine du développement d’applications constitue pour certains une opportunité.",
+                "Age limite : 23 ans\n" +
+                            "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                            "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                            "\n" +
+                            " \u23FA Sens de responsabilité, de l’organisation et de la discipline\n" +
+                            " \u23FA Autonomie\n" +
+                            " \u23FA Esprit d’analyse et de synthèse\n" +
+                            " \u23FA Créativité\n" +
+                            " \u23FA Curiosité pour les nouvelles technologies de l’information\n" +
+                            " \u23FA Fortes capacités d’adaptation\n" +
+                            "\n\n" +
+                            "Mode de sélection des candidats :\n" +
+                            "\n" +
+                            " \u23FA Dossier d’orientation à remplir\n" +
+                            " \u23FA Entretiens après présélection.",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        "Analyse et conception:\n" +
+                        "\n" +
+                        " \u23FA Analyser et Interpréter un cahier des charges\n" +
+                        " \u23FA Rédiger des spécifications fonctionnelles et techniques\n" +
+                        " \u23FA Réaliser des maquettes et des prototypes\n" +
+                        " \u23FA Concevoir des bases de données\n" +
+                        " \u23FA Concevoir une interface utilisateur dans un environnement Windows (GUI) ou Internet (IUI)\n" +
+                        " \u23FA Au niveau de la réalisation Technique\n" +
+                        " \u23FA Réaliser des composants logiciels à l’aide d’un langage de programmation orientée objet\n" +
+                        " \u23FA Assembler et Intégrer des composants logiciels\n" +
+                        " \u23FA Réaliser des tests unitaires et tests d’intégration\n" +
+                        " \u23FA Participer à la mise en exploitation et au support technique de l’application","ISTA MAAMORA");
+
+
+
+
+
+
+
+
+
+
+    }
 
     public void insertUser(String cin,String name, String lname, String date, String niveau, String secteure, String etablisement, String filiere){
         ContentValues values = new ContentValues();
@@ -69,8 +114,9 @@ public class OfpptDataWorker {
     }
 
 
-    public void insertFiliere(String num_modules, String nom_modules, String nbr_horaire, String details, String debouches, String conditions, String profile_formation, String etablissement){
+    public void insertFiliere(String name, String num_modules, String nom_modules, String nbr_horaire, String details, String debouches, String conditions, String profile_formation, String etablissement){
         ContentValues values = new ContentValues();
+        values.put(FiliereEntry.COLUMN_NAME, name);
         values.put(FiliereEntry.COLUMN_NUM_MODULES, num_modules);
         values.put(FiliereEntry.COLUMN_NOM_MODULES, nom_modules);
         values.put(FiliereEntry.COLUMN_NBR_HORAIRES, nbr_horaire);
