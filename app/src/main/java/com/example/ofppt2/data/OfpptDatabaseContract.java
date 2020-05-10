@@ -55,7 +55,7 @@ public final class OfpptDatabaseContract {
                         COLUMN_FILIERES + " TEXT NOT NULL )" ;
     }
 
-    public static final class UserssEntry implements BaseColumns {
+    public static final class UsersEntry implements BaseColumns {
         public static final String TABLE_NAME = "users";
         public static final String COLUMN_CIN = "cin";
         public static final String COLUMN_NAME = "name";

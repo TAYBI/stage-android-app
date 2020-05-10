@@ -22,7 +22,7 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         db.execSQL(NiveauEntry.SQL_CREATE_TABLE);
         db.execSQL(SecteurEntry.SQL_CREATE_TABLE);
         db.execSQL(FiliereEntry.SQL_CREATE_TABLE);
-        db.execSQL(UserssEntry.SQL_CREATE_TABLE);
+        db.execSQL(UsersEntry.SQL_CREATE_TABLE);
 
         OfpptDataWorker worker = new OfpptDataWorker(db);
         worker.insertNivaux();
@@ -35,6 +35,7 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + NiveauEntry.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + SecteurEntry.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + FiliereEntry.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + UsersEntry.TABLE_NAME);
 
         onCreate(db);
     }
@@ -54,6 +55,12 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
     public Cursor getAllFilieres(){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res = db.rawQuery("SELECT * FROM " + FiliereEntry.TABLE_NAME, null);
+        return  res;
+    }
+
+    public Cursor getAllUsers(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM " + UsersEntry.TABLE_NAME, null);
         return  res;
     }
 }

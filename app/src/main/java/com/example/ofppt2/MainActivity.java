@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.ofppt2.classes.Filiere;
 import com.example.ofppt2.classes.Niveau;
@@ -26,9 +27,10 @@ public class MainActivity extends AppCompatActivity{
     DataManager dm;
     OfpptOpenHelper db;
     Filiere filiere;
+    TextView visiteurs;
     Spinner mSpinnerNiveauFormation, mSpinnerNiveauScolaire, mSpinnerSecteur, mSpinnerFiliere;
     Button valider;
-    private String niveaFormation, secteurs, filieres, niveauScolaire;
+    private String niveaFormation, secteurs, filieres, niveauScolaire, counter;
 
             @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +42,15 @@ public class MainActivity extends AppCompatActivity{
         db = new OfpptOpenHelper(this);
         dm = new DataManager();
 
+        visiteurs = (TextView) findViewById(R.id.visiteurs);
         valider = (Button) findViewById(R.id.valider);
         mSpinnerNiveauFormation = (Spinner)findViewById(R.id.spinner_niveau_formation);
         mSpinnerSecteur = (Spinner)findViewById(R.id.spinner_secteur);
         mSpinnerFiliere = (Spinner)findViewById(R.id.spinner_filiere);
         mSpinnerNiveauScolaire = (Spinner)findViewById(R.id.spinner_niveau_scolaire);
         fillSpinner(mSpinnerNiveauScolaire, stringToList(niveauScolaire));
+
+        set_visiteur_num();
 
         load_Niveaux_data();
         load_Secteurs_data();
@@ -56,6 +61,14 @@ public class MainActivity extends AppCompatActivity{
         load_Filiere_Par_Secteur();
 
         handleValiderClick();
+    }
+
+    private void set_visiteur_num() {
+        Cursor res =  db.getAllUsers();
+        if (res.getCount() > 1)
+            counter = "Visiteurs: " + res.getCount();
+        counter = "Visiteur: " + res.getCount();
+        visiteurs.setText(counter);
     }
 
     private void handleValiderClick() {
