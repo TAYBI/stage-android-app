@@ -54,7 +54,6 @@ public class Filiere_info extends AppCompatActivity {
         profile_de_formation.setText(filiere.getProfile_de_formation());
         debouches.setText(filiere.getDebouches());
 
-//        download_details();
         handle_download_click();
     }
 
@@ -81,17 +80,31 @@ public class Filiere_info extends AppCompatActivity {
             title.setAlignment(Element.ALIGN_CENTER);
 
             PdfPTable table = new PdfPTable(3);
-            PdfPCell c1 = new PdfPCell(new Paragraph("N° Module"));
-            PdfPCell c2 = new PdfPCell(new Paragraph("Modules"));
-            PdfPCell c3 = new PdfPCell(new Paragraph("Total"));
+            table.setTotalWidth(500);
+            table.setWidths(new float[] {1, 3, 1});
+            table.setLockedWidth(true);
+            PdfPCell c1 = new PdfPCell(make_paragraph("N° Module"));
+            PdfPCell c2 = new PdfPCell(make_paragraph("Modules"));
+            PdfPCell c3 = new PdfPCell(make_paragraph("Total"));
+            c1.setPadding(10);
+            c2.setPadding(10);
+            c3.setPadding(10);
             table.addCell(c1);
             table.addCell(c2);
             table.addCell(c3);
 
             List<String>  num_modules = stringToList(filiere.getNumModule());
             List<String>  nom_modules = stringToList(filiere.getNomModule());
-            for(String num_module: num_modules){
-
+            for(int i =0; i < num_modules.size(); i ++){
+                c1 = new PdfPCell(new Paragraph(num_modules.get(i)));
+                c2 = new PdfPCell(new Paragraph(nom_modules.get(i)));
+                c3 = new PdfPCell(new Paragraph("Total"));
+                c1.setPadding(8);
+                c2.setPadding(8);
+                c3.setPadding(8);
+                table.addCell(c1);
+                table.addCell(c2);
+                table.addCell(c3);
             }
 
             document.add(title);
@@ -106,6 +119,12 @@ public class Filiere_info extends AppCompatActivity {
         catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private Paragraph make_paragraph(String s) {
+        Paragraph title = new Paragraph(s, FontFactory.getFont(FontFactory.HELVETICA, 14, Font.BOLD,
+                new CMYKColor(0, 0, 0,255)));
+        return title;
     }
 
     private List<String> stringToList(String s) {
