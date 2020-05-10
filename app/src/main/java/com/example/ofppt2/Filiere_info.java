@@ -1,7 +1,6 @@
 package com.example.ofppt2;
 
 import android.os.Environment;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,10 +18,10 @@ import com.itextpdf.text.pdf.CMYKColor;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.draw.LineSeparator;
 
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -75,17 +74,61 @@ public class Filiere_info extends AppCompatActivity {
             PdfWriter.getInstance(document, new FileOutputStream(path));
             document.open();
 
-            Paragraph title = new Paragraph(filiere.getName(), FontFactory.getFont(FontFactory.HELVETICA, 16, Font.BOLD,
+            Paragraph header = new Paragraph(filiere.getName(), FontFactory.getFont(FontFactory.HELVETICA, 16, Font.BOLD,
                     new CMYKColor(0, 255, 255,17)));
-            title.setAlignment(Element.ALIGN_CENTER);
+            header.setAlignment(Element.ALIGN_CENTER);
 
-            PdfPTable table = new PdfPTable(3);
+            PdfPTable table = fill_table();
+
+            document.add(header);
+            document.add(new Paragraph(" "));
+            document.add(new Paragraph(filiere.getDetails()));
+            document.add(new Paragraph(" "));
+            document.add(new LineSeparator(0.5f, 100, null, 0, -5));
+            document.add(new Paragraph(" "));
+
+            document.add(make_title("Profil de la formation:"));
+            document.add(new Paragraph(" "));
+            document.add(new Paragraph(filiere.getProfile_de_formation()));
+            document.add(new Paragraph(" "));
+            document.add(new LineSeparator(0.5f, 100, null, 0, -5));
+            document.add(new Paragraph(" "));
+
+            document.add(make_title("Conditions d’admission: "));
+            document.add(new Paragraph(" "));
+            document.add(new Paragraph(filiere.getConditions()));
+            document.add(new Paragraph(" "));
+            document.add(new LineSeparator(0.5f, 100, null, 0, -5));
+            document.add(new Paragraph(" "));
+
+            document.add(make_title("Débouchés: "));
+            document.add(new Paragraph(" "));
+            document.add(new Paragraph(filiere.getDebouches()));
+            document.add(new Paragraph(" "));
+            document.add(new LineSeparator(0.5f, 100, null, 0, -5));
+            document.add(new Paragraph(" "));
+
+            document.add(make_title("Programme de formation: "));
+            document.add(new Paragraph(" "));
+            document.add(table);
+
+            document.close();
+            Toast.makeText(this, filename + " is saved to\n" + path, Toast.LENGTH_SHORT).show();
+        }
+        catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private PdfPTable fill_table() {
+        PdfPTable table = new PdfPTable(3);
+        try {
             table.setTotalWidth(500);
             table.setWidths(new float[] {1, 3, 1});
             table.setLockedWidth(true);
-            PdfPCell c1 = new PdfPCell(make_paragraph("N° Module"));
-            PdfPCell c2 = new PdfPCell(make_paragraph("Modules"));
-            PdfPCell c3 = new PdfPCell(make_paragraph("Total"));
+            PdfPCell c1 = new PdfPCell(make_table_header("N° Module"));
+            PdfPCell c2 = new PdfPCell(make_table_header("Modules"));
+            PdfPCell c3 = new PdfPCell(make_table_header("Total"));
             c1.setPadding(10);
             c2.setPadding(10);
             c3.setPadding(10);
@@ -98,7 +141,7 @@ public class Filiere_info extends AppCompatActivity {
             for(int i =0; i < num_modules.size(); i ++){
                 c1 = new PdfPCell(new Paragraph(num_modules.get(i)));
                 c2 = new PdfPCell(new Paragraph(nom_modules.get(i)));
-                c3 = new PdfPCell(new Paragraph("Total"));
+                c3 = new PdfPCell(new Paragraph("xx"));
                 c1.setPadding(8);
                 c2.setPadding(8);
                 c3.setPadding(8);
@@ -106,23 +149,20 @@ public class Filiere_info extends AppCompatActivity {
                 table.addCell(c2);
                 table.addCell(c3);
             }
-
-            document.add(title);
-            document.add(new Paragraph(" "));
-            document.add(new Paragraph(filiere.getDetails()));
-            document.add(new Paragraph(" "));
-            document.add(table);
-
-            document.close();
-            Toast.makeText(this, filename + " is saved to\n" + path, Toast.LENGTH_SHORT).show();
-        }
-        catch (Exception e){
+        } catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+        return table;
     }
 
-    private Paragraph make_paragraph(String s) {
+    private Paragraph make_table_header(String s) {
         Paragraph title = new Paragraph(s, FontFactory.getFont(FontFactory.HELVETICA, 14, Font.BOLD,
+                new CMYKColor(0, 0, 0,255)));
+        return title;
+    }
+
+    private Paragraph make_title(String s) {
+        Paragraph title = new Paragraph(s, FontFactory.getFont(FontFactory.HELVETICA, 15, Font.BOLD,
                 new CMYKColor(0, 0, 0,255)));
         return title;
     }
