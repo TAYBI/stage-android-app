@@ -1,6 +1,12 @@
 package com.example.ofppt2;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.ofppt2.classes.Filiere;
 import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.FontFactory;
@@ -20,6 +27,7 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.draw.LineSeparator;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -27,6 +35,8 @@ import java.util.List;
 import java.util.Locale;
 
 public class Filiere_info extends AppCompatActivity {
+
+    private static final int STORAGE_CODE = 1000;
 
     Filiere filiere;
     TextView title, conditions, debouches, profile_de_formation, details;
@@ -60,9 +70,33 @@ public class Filiere_info extends AppCompatActivity {
         telecharger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                download_details();
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                    if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
+                        String[] permeessions  = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                        requestPermissions(permeessions, STORAGE_CODE);
+                    }
+                    else {
+                        download_details();
+                    }
+                }
+                else {
+                    download_details();
+                }
             }
         });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode){
+            case STORAGE_CODE:{
+                if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    download_details();
+                }else {
+                    Toast.makeText(this, "Permission denied ... ☹ !", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
     }
 
     private void download_details() {
@@ -75,7 +109,7 @@ public class Filiere_info extends AppCompatActivity {
             document.open();
 
             Paragraph header = new Paragraph(filiere.getName(), FontFactory.getFont(FontFactory.HELVETICA, 16, Font.BOLD,
-                    new CMYKColor(0, 255, 255,17)));
+                    new CMYKColor(0, 0, 0,255)));
             header.setAlignment(Element.ALIGN_CENTER);
 
             PdfPTable table = fill_table();
@@ -83,40 +117,53 @@ public class Filiere_info extends AppCompatActivity {
             document.add(header);
             document.add(new Paragraph(" "));
             document.add(new Paragraph(filiere.getDetails()));
-            document.add(new Paragraph(" "));
-            document.add(new LineSeparator(0.5f, 100, null, 0, -5));
-            document.add(new Paragraph(" "));
+            line(document);
 
-            document.add(make_title("Profil de la formation:"));
-            document.add(new Paragraph(" "));
-            document.add(new Paragraph(filiere.getProfile_de_formation()));
-            document.add(new Paragraph(" "));
-            document.add(new LineSeparator(0.5f, 100, null, 0, -5));
-            document.add(new Paragraph(" "));
+            make_paragraph(document, "Profil de la formation", filiere.getProfile_de_formation());
+            line(document);
 
-            document.add(make_title("Conditions d’admission: "));
-            document.add(new Paragraph(" "));
-            document.add(new Paragraph(filiere.getConditions()));
-            document.add(new Paragraph(" "));
-            document.add(new LineSeparator(0.5f, 100, null, 0, -5));
-            document.add(new Paragraph(" "));
+            make_paragraph(document, "Conditions d’admission: ", filiere.getConditions());
+            line(document);
 
-            document.add(make_title("Débouchés: "));
-            document.add(new Paragraph(" "));
-            document.add(new Paragraph(filiere.getDebouches()));
-            document.add(new Paragraph(" "));
-            document.add(new LineSeparator(0.5f, 100, null, 0, -5));
-            document.add(new Paragraph(" "));
+            make_paragraph(document, "Débouchés: ", filiere.getDebouches());
+            line(document);
 
             document.add(make_title("Programme de formation: "));
             document.add(new Paragraph(" "));
             document.add(table);
 
             document.close();
-            Toast.makeText(this, filename + " is saved to\n" + path, Toast.LENGTH_SHORT).show();
         }
         catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        finally {
+            Toast.makeText(this, filename + " is saved to\n" + path, Toast.LENGTH_SHORT).show();
+
+            File file =  new File(path);
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType( Uri.fromFile( file ), "application/pdf" );
+            startActivity(intent);
+        }
+    }
+
+    private void make_paragraph(Document document, String title, String body) {
+        try {
+            document.add(make_title(title));
+            document.add(new Paragraph(" "));
+            document.add(new Paragraph(body));
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void line(Document document) {
+        try {
+            document.add(new Paragraph(" "));
+            document.add(new LineSeparator(0.5f, 100, null, 0, -5));
+            document.add(new Paragraph(" "));
+        } catch (DocumentException e) {
+            e.printStackTrace();
         }
     }
 
