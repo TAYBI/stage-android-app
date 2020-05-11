@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ofppt2.classes.Filiere;
 import com.example.ofppt2.classes.Niveau;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity{
     OfpptOpenHelper db;
     Filiere filiere;
     TextView visiteurs;
+    EditText cin, nom, prenom, dat_nais;
     Spinner mSpinnerNiveauFormation, mSpinnerNiveauScolaire, mSpinnerSecteur, mSpinnerFiliere;
     Button valider;
     private String niveaFormation, secteurs, filieres, niveauScolaire, counter;
@@ -41,6 +44,11 @@ public class MainActivity extends AppCompatActivity{
 
         db = new OfpptOpenHelper(this);
         dm = new DataManager();
+
+        cin = (EditText) findViewById(R.id.cin);
+        nom = (EditText) findViewById(R.id.nom);
+        prenom = (EditText) findViewById(R.id.prenom);
+        dat_nais = (EditText) findViewById(R.id.dat_naiss);
 
         visiteurs = (TextView) findViewById(R.id.visiteurs);
         valider = (Button) findViewById(R.id.valider);
@@ -75,6 +83,9 @@ public class MainActivity extends AppCompatActivity{
         valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                add_user();
+
                 Intent intent = new Intent(MainActivity.this, Filiere_info.class);
                 String filereString = mSpinnerFiliere.getSelectedItem().toString();
                 filiere = dm.getFiliere(filereString);
@@ -82,6 +93,19 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+    }
+
+    private void add_user() {
+        boolean useInserted =  db.insertUser(cin.getText().toString(), prenom.getText().toString(), nom.getText().toString(), dat_nais.getText().toString(),
+                     mSpinnerNiveauScolaire.getSelectedItem().toString(),
+                    mSpinnerNiveauFormation.getSelectedItem().toString(),
+                    mSpinnerSecteur.getSelectedItem().toString(),
+                    mSpinnerFiliere.getSelectedItem().toString());
+
+        if(useInserted)
+            Toast.makeText(MainActivity.this,  prenom.getText().toString() + " added to database", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(MainActivity.this,  "data not inserted \uD83D\uDE29 !", Toast.LENGTH_LONG).show();
     }
 
     private void load_Filieres_data() {

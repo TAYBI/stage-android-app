@@ -1,5 +1,6 @@
 package com.example.ofppt2.data;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -62,5 +63,23 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res = db.rawQuery("SELECT * FROM " + UsersEntry.TABLE_NAME, null);
         return  res;
+    }
+
+    public boolean insertUser(String cin,String name, String lname, String date, String niveau_scolaire, String niveau_formation, String secteure, String filiere){
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(UsersEntry.COLUMN_CIN, cin);
+        values.put(UsersEntry.COLUMN_NAME, name);
+        values.put(UsersEntry.COLUMN_LAST_NAME, lname);
+        values.put(UsersEntry.COLUMN_DATE_NAIS, date);
+        values.put(UsersEntry.COLUMN_NIVEAU_SCOLAIRE, niveau_scolaire);
+        values.put(UsersEntry.COLUMN_NIVEAU_FORMATION, niveau_formation);
+        values.put(UsersEntry.COLUMN_SECTEURE, secteure);
+        values.put(UsersEntry.COLUMN_FILIERE, filiere);
+
+        long newRowId = db.insert(UsersEntry.TABLE_NAME, null, values);
+        if (newRowId == -1) return false;
+        else return true;
     }
 }

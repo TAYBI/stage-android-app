@@ -61,9 +61,9 @@ public final class OfpptDatabaseContract {
         public static final String COLUMN_NAME = "name";
         public static final String COLUMN_LAST_NAME = "last_name";
         public static final String COLUMN_DATE_NAIS = "date_nais";
-        public static final String COLUMN_NIVEAU = "niveau";
+        public static final String COLUMN_NIVEAU_SCOLAIRE = "niveau_scolaire";
+        public static final String COLUMN_NIVEAU_FORMATION = "niveau_formation";
         public static final String COLUMN_SECTEURE = "secteure";
-        public static final String COLUMN_ETABLISEMENT = "etabisement";
         public static final String COLUMN_FILIERE = "filiere";
 
         public static final String SQL_CREATE_TABLE =
@@ -73,9 +73,9 @@ public final class OfpptDatabaseContract {
                         COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
                         COLUMN_LAST_NAME + " TEXT NOT NULL, " +
                         COLUMN_DATE_NAIS + " TEXT NOT NULL, " +
-                        COLUMN_NIVEAU + " TEXT NOT NULL, " +
+                        COLUMN_NIVEAU_SCOLAIRE + " TEXT NOT NULL, " +
+                        COLUMN_NIVEAU_FORMATION + " TEXT NOT NULL, " +
                         COLUMN_SECTEURE + " TEXT NOT NULL, " +
-                        COLUMN_ETABLISEMENT + " TEXT NOT NULL, " +
                         COLUMN_FILIERE + " TEXT NOT NULL )";
     }
 }

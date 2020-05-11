@@ -5,20 +5,20 @@ public class User {
     private String fname;
     private String lname;
     private String dateNaiss;
-    private String niveau;
+    private String niveau_scolaire;
+    private String niveau_formation;
     private String secteur;
     private String filiere;
-    private String etablisement;
 
-    public User(String cin, String fname, String lname, String dateNaiss, String niveau, String secteur, String filiere, String etablisement) {
+    public User(String cin, String fname, String lname, String dateNaiss, String niveau_scolaire, String niveau_formation, String secteur, String filiere) {
         this.cin = cin;
         this.fname = fname;
         this.lname = lname;
         this.dateNaiss = dateNaiss;
-        this.niveau = niveau;
+        this.niveau_scolaire = niveau_scolaire;
+        this.niveau_formation = niveau_formation;
         this.secteur = secteur;
         this.filiere = filiere;
-        this.etablisement = etablisement;
     }
 
     public String getCin() {
@@ -53,12 +53,12 @@ public class User {
         this.dateNaiss = dateNaiss;
     }
 
-    public String getNiveau() {
-        return niveau;
+    public String getNiveau_scolaire() {
+        return niveau_scolaire;
     }
 
-    public void setNiveau(String niveau) {
-        this.niveau = niveau;
+    public void setNiveau_scolaire(String niveau_scolaire) {
+        this.niveau_scolaire = niveau_scolaire;
     }
 
     public String getSecteur() {
@@ -77,12 +77,12 @@ public class User {
         this.filiere = filiere;
     }
 
-    public String getEtablisement() {
-        return etablisement;
+    public String getNiveau_formation() {
+        return niveau_formation;
     }
 
-    public void setEtablisement(String etablisement) {
-        this.etablisement = etablisement;
+    public void setNiveau_formation(String niveau_formation) {
+        this.niveau_formation = niveau_formation;
     }
 
     @Override
@@ -92,10 +92,10 @@ public class User {
                 ", fname='" + fname + '\'' +
                 ", lname='" + lname + '\'' +
                 ", dateNaiss='" + dateNaiss + '\'' +
-                ", niveau='" + niveau + '\'' +
+                ", niveau='" + niveau_scolaire + '\'' +
                 ", secteur='" + secteur + '\'' +
                 ", filiere='" + filiere + '\'' +
-                ", etablisement='" + etablisement + '\'' +
+                ", etablisement='" + niveau_formation + '\'' +
                 '}';
     }
 }

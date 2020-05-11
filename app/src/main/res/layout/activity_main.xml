@@ -65,6 +65,7 @@
                     android:textSize="@dimen/text_mud" />
 
                 <EditText
+                    android:id="@+id/cin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -90,6 +91,7 @@
                     android:textSize="@dimen/text_mud" />
 
                 <EditText
+                    android:id="@+id/prenom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -116,6 +118,7 @@
                     android:textSize="@dimen/text_mud" />
 
                 <EditText
+                    android:id="@+id/nom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -142,6 +145,7 @@
                     android:textSize="@dimen/text_mud" />
 
                 <EditText
+                    android:id="@+id/dat_naiss"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="aaaa/mm/jj" />

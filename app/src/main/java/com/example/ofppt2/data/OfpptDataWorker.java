@@ -158,19 +158,6 @@ public class OfpptDataWorker {
 //        "Mécatronique"
     }
 
-    public void insertUser(String cin,String name, String lname, String date, String niveau, String secteure, String etablisement, String filiere){
-        ContentValues values = new ContentValues();
-        values.put(UsersEntry.COLUMN_CIN, cin);
-        values.put(UsersEntry.COLUMN_NAME, name);
-        values.put(UsersEntry.COLUMN_LAST_NAME, lname);
-        values.put(UsersEntry.COLUMN_DATE_NAIS, date);
-        values.put(UsersEntry.COLUMN_NIVEAU, niveau);
-        values.put(UsersEntry.COLUMN_SECTEURE, secteure);
-        values.put(UsersEntry.COLUMN_ETABLISEMENT, etablisement);
-        values.put(UsersEntry.COLUMN_FILIERE, filiere);
-
-        long newRowId = Db.insert(UsersEntry.TABLE_NAME, null, values);
-    }
 
     public void insertNiveau(String name, String secteurs){
         ContentValues values = new ContentValues();
@@ -201,6 +188,6 @@ public class OfpptDataWorker {
         values.put(FiliereEntry.COLUMN_PROFILE_DE_FORMATION, profile_formation);
         values.put(FiliereEntry.COLUMN_ETABISSEMENT, etablissement);
 
-        long newRowId = Db.insert(FiliereEntry.TABLE_NAME, null, values);
+        Db.insert(FiliereEntry.TABLE_NAME, null, values);
     }
 }

@@ -124,9 +124,7 @@ public class Filiere_info extends AppCompatActivity{
 
 
         try {
-//            PdfWriter.getInstance(document, new FileOutputStream(path));
-
-            document.add(header);
+           document.add(header);
             document.add(new Paragraph(" "));
             document.add(new Paragraph(filiere.getDetails()));
             line(document);
@@ -152,11 +150,9 @@ public class Filiere_info extends AppCompatActivity{
         Toast.makeText(this, filename + " is saved to\n" + path, Toast.LENGTH_SHORT).show();
         document.close();
 
-//        finally {
         try{
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-//            Uri fileUri  = Uri.fromFile( file );
             Uri fileUri  = FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID + ".provider", file);
             intent.setDataAndType( fileUri, "application/pdf" );
             startActivity(intent);
@@ -167,7 +163,6 @@ public class Filiere_info extends AppCompatActivity{
         finally {
             Toast.makeText(this, filename + " is saved to\n" + path, Toast.LENGTH_SHORT).show();
         }
-//        }
     }
 
     private void make_paragraph(Document document, String title, String body) {
