@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.support.annotation.NonNull;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,7 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.CMYKColor;
 import com.itextpdf.text.pdf.PdfPCell;
@@ -34,7 +36,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-public class Filiere_info extends AppCompatActivity {
+public class Filiere_info extends AppCompatActivity{
 
     private static final int STORAGE_CODE = 1000;
 
@@ -100,19 +102,29 @@ public class Filiere_info extends AppCompatActivity {
     }
 
     private void download_details() {
-        Document document = new Document();
         String filename = new SimpleDateFormat("yyyyMMdd__HHmmss", Locale.getDefault()).format(System.currentTimeMillis());
         String path = Environment.getExternalStorageDirectory() + "/" + filename + ".pdf";
+        File file =  new File(path);
+        Document document = new Document(PageSize.A4);
+
+        try{
+            PdfWriter.getInstance(document, new FileOutputStream(file.getAbsoluteFile()));
+        }
+        catch (Exception e){
+            Toast.makeText(this, e.getMessage() + path, Toast.LENGTH_SHORT).show();
+        }
+
+        document.open();
+
+        Paragraph header = new Paragraph(filiere.getName(), FontFactory.getFont(FontFactory.HELVETICA, 16, Font.BOLD,
+                new CMYKColor(0, 0, 0,255)));
+        header.setAlignment(Element.ALIGN_CENTER);
+
+        PdfPTable table = fill_table();
+
 
         try {
-            PdfWriter.getInstance(document, new FileOutputStream(path));
-            document.open();
-
-            Paragraph header = new Paragraph(filiere.getName(), FontFactory.getFont(FontFactory.HELVETICA, 16, Font.BOLD,
-                    new CMYKColor(0, 0, 0,255)));
-            header.setAlignment(Element.ALIGN_CENTER);
-
-            PdfPTable table = fill_table();
+//            PdfWriter.getInstance(document, new FileOutputStream(path));
 
             document.add(header);
             document.add(new Paragraph(" "));
@@ -132,19 +144,30 @@ public class Filiere_info extends AppCompatActivity {
             document.add(new Paragraph(" "));
             document.add(table);
 
-            document.close();
         }
         catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
-        finally {
-            Toast.makeText(this, filename + " is saved to\n" + path, Toast.LENGTH_SHORT).show();
 
-            File file =  new File(path);
+        Toast.makeText(this, filename + " is saved to\n" + path, Toast.LENGTH_SHORT).show();
+        document.close();
+
+//        finally {
+        try{
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setDataAndType( Uri.fromFile( file ), "application/pdf" );
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+//            Uri fileUri  = Uri.fromFile( file );
+            Uri fileUri  = FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID + ".provider", file);
+            intent.setDataAndType( fileUri, "application/pdf" );
             startActivity(intent);
         }
+        catch (Exception e){
+            Toast.makeText(this, e.getMessage() + path, Toast.LENGTH_SHORT).show();
+        }
+        finally {
+            Toast.makeText(this, filename + " is saved to\n" + path, Toast.LENGTH_SHORT).show();
+        }
+//        }
     }
 
     private void make_paragraph(Document document, String title, String body) {
