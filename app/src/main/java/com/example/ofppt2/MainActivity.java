@@ -120,8 +120,7 @@ public class MainActivity extends AppCompatActivity{
         while (res.moveToNext()){
             Filiere filiereTemp = new Filiere(res.getString(1),res.getString(2),
                     res.getString(3),res.getString(4),res.getString(5),
-                    res.getString(6),res.getString(7),res.getString(8),
-                    res.getString(9));
+                    res.getString(6),res.getString(7),res.getString(8));
             dm.setFiliere(filiereTemp);
         }
     }

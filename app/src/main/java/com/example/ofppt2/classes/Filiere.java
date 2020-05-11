@@ -13,9 +13,8 @@ public class Filiere implements Parcelable {
     private String debouches;
     private String conditions;
     private String profile_de_formation;
-    private String etablissement;
 
-    public Filiere(String name, String numModule, String nomModule, String num_Horaire, String details, String debouches, String conditions, String profile_de_formation, String etablissement) {
+    public Filiere(String name, String numModule, String nomModule, String num_Horaire, String details, String debouches, String conditions, String profile_de_formation) {
         this.name = name;
         this.numModule = numModule;
         this.nomModule = nomModule;
@@ -24,7 +23,6 @@ public class Filiere implements Parcelable {
         this.debouches = debouches;
         this.conditions = conditions;
         this.profile_de_formation = profile_de_formation;
-        this.etablissement = etablissement;
     }
 
     protected Filiere(Parcel in) {
@@ -36,7 +34,6 @@ public class Filiere implements Parcelable {
         debouches = in.readString();
         conditions = in.readString();
         profile_de_formation = in.readString();
-        etablissement = in.readString();
     }
 
     @Override
@@ -49,7 +46,6 @@ public class Filiere implements Parcelable {
         dest.writeString(debouches);
         dest.writeString(conditions);
         dest.writeString(profile_de_formation);
-        dest.writeString(etablissement);
     }
 
     @Override
@@ -91,10 +87,6 @@ public class Filiere implements Parcelable {
 
     public String getConditions() {
         return conditions;
-    }
-
-    public String getEtablissement() {
-        return etablissement;
     }
 
     public String getProfile_de_formation() {

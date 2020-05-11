@@ -15,7 +15,6 @@ public final class OfpptDatabaseContract {
         public static final String COLUMN_DEBOUCHES = "debouches";
         public static final String COLUMN_CONDITIONS = "conditions";
         public static final String COLUMN_PROFILE_DE_FORMATION = "profile_de_formation";
-        public static final String COLUMN_ETABISSEMENT = "etabilssement";
 
         public static final String SQL_CREATE_TABLE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
@@ -27,8 +26,7 @@ public final class OfpptDatabaseContract {
                         COLUMN_DETAILS + " TEXT NOT NULL, " +
                         COLUMN_DEBOUCHES + " TEXT NOT NULL, " +
                         COLUMN_CONDITIONS + " TEXT NOT NULL, " +
-                        COLUMN_PROFILE_DE_FORMATION + " TEXT NOT NULL, " +
-                        COLUMN_ETABISSEMENT + " TEXT NOT NULL )";
+                        COLUMN_PROFILE_DE_FORMATION + " TEXT NOT NULL )";
     }
 
     public static final class NiveauEntry implements BaseColumns {

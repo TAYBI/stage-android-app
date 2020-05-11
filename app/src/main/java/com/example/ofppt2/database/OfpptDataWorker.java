@@ -70,11 +70,102 @@ public class OfpptDataWorker {
                         " • Réaliser des composants logiciels à l’aide d’un langage de programmation orientée objet\n" +
                         " • Assembler et Intégrer des composants logiciels\n" +
                         " • Réaliser des tests unitaires et tests d’intégration\n" +
-                        " • Participer à la mise en exploitation et au support technique de l’application","ISTA MAAMORA");
-//        insertFiliere("Menuiserie Aluminium","","","","","","","","");
-//        insertFiliere("Techniques de Développement Informatique","","","","","","","","");
-//        insertFiliere("Monteur Dépanneur Frigoriste","","","","","","","","");
-//        insertFiliere("Carrosserie Peinture Automobile","","","","","","","","");
+                        " • Participer à la mise en exploitation et au support technique de l’application");
+        insertFiliere("Menuiserie Aluminium","","","","L’Ouvrier Spécialisé en Menuiserie Aluminium est un professionnel capable de réaliser l’assemblage en atelier des cadres en aluminium et de les mettre en place dans les chantiers de construction.",
+                "L’Ouvrier Spécialisé en Menuiserie Aluminium peut être employé dans une PME ou dans une grande entreprise. Il peut également créer sa propre entreprise.",
+                        "Age limite : de 15 à 30 ans\n" +
+                        "\n" +
+                        "Niveau scolaire minimum requis : 6ème année de l’Enseignement Fondamental et plus\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " •  Bonne dextérité\n" +
+                        " •  Méticuleux\n" +
+                        " •  Esprit créatif\n" +
+                        "\n" +
+                        "Contre indications :\n" +
+                        "\n" +
+                        " • Troubles moteurs des membres inférieurs ou supérieurs\n" +
+                        " • Vertige\n" +
+                        "\n" +
+                        " • Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Tests d’admission",
+                        "Le programme de formation est étalé sur 1150 heures dont un stage d’application de 4 mois en entreprise.\n" +
+                        "\n" +
+                        "Modules :\n" +
+                        "\n" +
+                        " • Métier et formation en menuiserie aluminium\n" +
+                        " • Aluminium dans le bâtiment\n" +
+                        " • Les produits verriers\n" +
+                        " • Devis descriptif, quantitatif, et estimatif.\n" +
+                        " • Etudes d’une gamme y compris occultation et fermeture\n" +
+                        " • Fabrication et usinage\n" +
+                        " • Pose de la menuiserie aluminium sur chantier.\n" +
+                        " • Plan d’hygiène et de sécurité\n" +
+                        " • Stage en entreprise");
+        insertFiliere("Monteur Dépanneur Frigoriste","","","","Le Monteur Dépanneur Frigoriste est un ouvrier chargé d’assurer l’entretien, le dépannage et le montage des installations frigorifiques de petite et moyenne puissance. Il exerce son métier au sein des entreprises d’installation et de maintenance en froid commercial (souvent de petites entreprises à structure légère).",
+                "Le lauréat peut être employé dans les PME ou dans une grande entreprise dans les secteurs industriels les plus divers. Il peut être affecté dans les services techniques du secteur public. Il peut également créer sa propre entreprise.",
+                "Age limite : 30 ans\n" +
+                        "\n" +
+                        "Niveau scolaire minimum requis :\n" +
+                        "\n" +
+                        " • 3ème année de l’Enseignement collégial \n" +
+                        "\n" +
+                        "Ou Diplôme du niveau Spécialisation dans les secteurs Industriel et du BTP\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n\n" +
+                        " • Bonne dextérité\n" +
+                        " • Méticuleux\n" +
+                        " • Esprit créatif.\n" +
+                        "\n" +
+                        "Mode de sélection des candidats :\n" +
+                        "\n • Dossier d’orientation à remplir\n" +
+                        " • Tests d’admission",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        "\n" +
+                        " • Réaliser le montage d’installations frigorifiques simples, utilisées principalement pour la conservation des denrées alimentaires (chambres froides\n" +
+                        "vitrines réfrigérées comptoirs ou armoires frigorifiques…)\n" +
+                        " • Mettre au point des chambres froides de petites ou moyennes puissances\n" +
+                        " • Mettre en service, maintenir, entretenir et dépanner des équipements de froid et de climatisation grand public\n" +
+                        " • Dépanner et apporter les modifications nécessaires à leur bon fonctionnement\n" +
+                        " • Procéder aux opérations d’entretien courantes\n" +
+                        " • Maintenir et remplacer les éléments défectueux si nécessaire");
+        insertFiliere("Carrosserie Peinture Automobile","","","",
+                "Le Carrossier Peintre est un professionnel chargé de remettre en état les carrosseries et peintures qui composent le véhicule automobile. A l’issue de sa formation, l’appelant sera capable de réaliser des réparations simples, des opérations de remise en état par remplacement d’éléments ou par réparation, de faire les essais nécessaires avant et après les travaux et de réaliser l’autocontrôle de la qualité des travaux entrepris.",
+                "Le lauréat peut prétendre au poste de responsable du service Carrosserie Peinture d’un parc automobile dans une grande entreprise ou un grand garage. Il peut également lancer sa propre entreprise dans le domaine de la Carrosserie Peinture.",
+                        "Age limite : 30 ans\n" +
+                        "\n" +
+                        "Niveau scolaire minimum requis : 3ème année de l’Enseignement collégial\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de l'organisation\n" +
+                        " • Sociabilité\n" +
+                        " • Sens de responsabilité\n" +
+                        " • Conscience professionnelle élevée\n" +
+                        " • Bonne capacité d'adaptation\n" +
+                        "\n" +
+                        "\nContre-indications à l'exercice du métier:\n" +
+                        " • Allergie au bruit\n" +
+                        " • Allergie aux odeurs d’hydrocarbure\n" +
+                        " • Maladies pulmonaires\n" +
+                        " • Allergie à la peinture et ses produits\n" +
+                        " • Non distinction des couleurs.\n" +
+                        "\n" +
+                        " • Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Tests d’admission",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n\n" +
+                        " • Appliquer les règles d’hygiène et de sécurité de travail\n" +
+                        " • Catégoriser les différents types de véhicules automobiles et leurs composants\n" +
+                        " • Interpréter des dessins d’ensemble des plans mécaniques et plans de soubassement\n" +
+                        " • Effectuer des travaux de soudage\n" +
+                        " • Déposer, reposer, régler des éléments amovibles\n" +
+                        " • Repérer, remplacer des vitrages\n" +
+                        " • Effectuer des travaux de réparation des matériaux composites\n" +
+                        " • Appliquer les différents produits en carrosserie automobile\n" +
+                        " • Appliquer les différents produits utilisés en peinture automobile\n" +
+                        " • Monter et corriger tous types de teintes\n" +
+                        " • Appliquer une laque\n" +
+                        " • Effectuer les travaux de bases en carrosserie automobile");
 //        insertFiliere("Réparateur de Véhicules Automobiles","","","","","","","","");
 //        insertFiliere("Electricité d'Entretien Industriel","","","","","","","","");
 //        insertFiliere("Electromécanique","","","","","","","","");
@@ -176,7 +267,7 @@ public class OfpptDataWorker {
     }
 
 
-    public void insertFiliere(String name, String num_modules, String nom_modules, String nbr_horaire, String details, String debouches, String conditions, String profile_formation, String etablissement){
+    public void insertFiliere(String name, String num_modules, String nom_modules, String nbr_horaire, String details, String debouches, String conditions, String profile_formation){
         ContentValues values = new ContentValues();
         values.put(FiliereEntry.COLUMN_NAME, name);
         values.put(FiliereEntry.COLUMN_NUM_MODULES, num_modules);
@@ -186,7 +277,6 @@ public class OfpptDataWorker {
         values.put(FiliereEntry.COLUMN_DEBOUCHES, debouches);
         values.put(FiliereEntry.COLUMN_CONDITIONS, conditions);
         values.put(FiliereEntry.COLUMN_PROFILE_DE_FORMATION, profile_formation);
-        values.put(FiliereEntry.COLUMN_ETABISSEMENT, etablissement);
 
         Db.insert(FiliereEntry.TABLE_NAME, null, values);
     }
