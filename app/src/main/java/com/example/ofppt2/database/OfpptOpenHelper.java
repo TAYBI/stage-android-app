@@ -1,4 +1,4 @@
-package com.example.ofppt2.data;
+package com.example.ofppt2.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
-import static com.example.ofppt2.data.OfpptDatabaseContract.*;
+import static com.example.ofppt2.database.OfpptDatabaseContract.*;
 
 public class OfpptOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "ofppt.db";
@@ -81,5 +81,11 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         long newRowId = db.insert(UsersEntry.TABLE_NAME, null, values);
         if (newRowId == -1) return false;
         else return true;
+    }
+
+    public  Cursor useExisted(String cin){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM " + UsersEntry.TABLE_NAME + " WHERE " + UsersEntry.COLUMN_CIN + " = '" + cin + "'", null);
+        return  res;
     }
 }

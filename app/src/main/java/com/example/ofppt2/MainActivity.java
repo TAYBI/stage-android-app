@@ -1,7 +1,6 @@
 package com.example.ofppt2;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,9 +17,8 @@ import android.widget.Toast;
 import com.example.ofppt2.classes.Filiere;
 import com.example.ofppt2.classes.Niveau;
 import com.example.ofppt2.classes.Secteur;
-import com.example.ofppt2.data.OfpptOpenHelper;
+import com.example.ofppt2.database.OfpptOpenHelper;
 
-import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
@@ -71,11 +69,19 @@ public class MainActivity extends AppCompatActivity{
         handleValiderClick();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        set_visiteur_num();
+    }
+
+
     private void set_visiteur_num() {
         Cursor res =  db.getAllUsers();
         if (res.getCount() > 1)
             counter = "Visiteurs: " + res.getCount();
-        counter = "Visiteur: " + res.getCount();
+        else
+            counter = "Visiteur: " + res.getCount();
         visiteurs.setText(counter);
     }
 
@@ -83,7 +89,6 @@ public class MainActivity extends AppCompatActivity{
         valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 add_user();
 
                 Intent intent = new Intent(MainActivity.this, Filiere_info.class);
@@ -96,16 +101,15 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void add_user() {
-        boolean useInserted =  db.insertUser(cin.getText().toString(), prenom.getText().toString(), nom.getText().toString(), dat_nais.getText().toString(),
-                     mSpinnerNiveauScolaire.getSelectedItem().toString(),
+
+        if(db.useExisted(cin.getText().toString()).getCount() == 0)
+        {
+             db.insertUser(cin.getText().toString(), prenom.getText().toString(), nom.getText().toString(), dat_nais.getText().toString(),
+                    mSpinnerNiveauScolaire.getSelectedItem().toString(),
                     mSpinnerNiveauFormation.getSelectedItem().toString(),
                     mSpinnerSecteur.getSelectedItem().toString(),
                     mSpinnerFiliere.getSelectedItem().toString());
-
-        if(useInserted)
-            Toast.makeText(MainActivity.this,  prenom.getText().toString() + " added to database", Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(MainActivity.this,  "data not inserted \uD83D\uDE29 !", Toast.LENGTH_LONG).show();
+        }
     }
 
     private void load_Filieres_data() {

@@ -1,4 +1,4 @@
-package com.example.ofppt2.data;
+package com.example.ofppt2.database;
 
 import android.provider.BaseColumns;
 
@@ -70,7 +70,7 @@ public final class OfpptDatabaseContract {
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY, " +
                         COLUMN_CIN + " TEXT UNIQUE NOT NULL, " +
-                        COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
+                        COLUMN_NAME + " TEXT NOT NULL, " +
                         COLUMN_LAST_NAME + " TEXT NOT NULL, " +
                         COLUMN_DATE_NAIS + " TEXT NOT NULL, " +
                         COLUMN_NIVEAU_SCOLAIRE + " TEXT NOT NULL, " +

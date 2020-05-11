@@ -1,9 +1,9 @@
-package com.example.ofppt2.data;
+package com.example.ofppt2.database;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 
-import static com.example.ofppt2.data.OfpptDatabaseContract.*;
+import static com.example.ofppt2.database.OfpptDatabaseContract.*;
 
 
 public class OfpptDataWorker {
