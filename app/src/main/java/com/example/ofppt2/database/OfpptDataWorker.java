@@ -717,21 +717,362 @@ public class OfpptDataWorker {
                         " • Intervenir sur une installation\n" +
                         " • Optimiser un fonctionnement\n" +
                         " • Communiquer à l’intérieur et à l’extérieur de l’entreprise");
-//        insertFiliere("Automatisation et Instrumentation Industrielle","","","","","","","");
-//        insertFiliere("Electromécanique des Systèmes Automatisées","","","","","","","");
-//        insertFiliere("Techniques des Réseaux Informatiques","","","","","","","");
-//        insertFiliere("Technico-Commercial en Vente de Véhicules et Pièces de Rechange","","","","","","","");
-//        insertFiliere("Technicien spécialisé en Diagnostic et Electronique Embarquée","","","","","","","");
-//        insertFiliere("Infographie","","","","","","","");
-//        insertFiliere("TS Traitement de surface","","","","","","","");
-//        insertFiliere("Technicien Spécialisé Bureau d’Etudes en Automobile","","","","","","","");
-//        insertFiliere("Maintenance des Machines Outils et Autres Machines de Production Automatisée","","","","","","","");
-//        insertFiliere("Maintenance des Machines et Outillage en Plasturgie","","","","","","","");
+        insertFiliere("Automatisation et Instrumentation Industrielle","","","",
+                "Le Technicien Spécialisé en Automatisation et Instrumentation Industrielle travaille en général dans des entreprises équipées d’installations automatisées. Il a pour principale tâche d’assurer le bon fonctionnement des éléments des chaînes de production en relation avec la qualité demandée tout en respectant les délais, l’optimisation de la productivité et la bonne gestion des matières utilisées. Les bases de sa fonction consistent à assurer la sécurité des personnes et du matériel.",
+                "Le Technicien Spécialisé en Automatisation et Instrumentation Industrielle est un professionnel qui peut faire carrière dans les grandes entreprises utilisant une automatisation de la production. En démontrant son professionnalisme et ses expériences acquises sur le terrain, il peut devenir aisément un chef d’équipe de maintenance et d’intervention.",
+                "Age limite : 26 ans pour les bacheliers et 30 ans\n" +
+                        "pour les licenciés\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de responsabilité, de l’organisation et de la discipline\n" +
+                        " • Esprit d’ Autonomie, d’analyse, de créativité et d’initiative\n" +
+                        " • Aisance en relations humaines\n" +
+                        " • Maîtrise de soi, Passion pour la technologie et ambition pour la promotion professionnelle.\n" +
+                        "\n" +
+                        "Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Entretiens après présélection.",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        " • Automatiser des systèmes séquentiels simples en utilisant un automate programmable\n" +
+                        " • Rendre opérationnel un ensemble capteur\n" +
+                        " • conditionneur pour un procédé industriel\n" +
+                        " • Assurer le fonctionnement d'un procédé industriel à partir d'un contrôleur industriel\n" +
+                        " • Rendre opérationnel des systèmes de commandes électriques des machines électriques\n" +
+                        " • Contrôler, dans un contexte industriel, des variables physiques à l'aide d'un automate programmable\n" +
+                        " • Maintenir en équilibre un procédé industriel à partir d'un contrôleur numérique\n" +
+                        " • Mettre en œuvre une boucle de contrôle de procédé industriel incluant un système SCADA\n" +
+                        " • Rendre opérationnel des systèmes de commandes électroniques des machines électriques\n" +
+                        " • Conduire le projet de fin d'études");
+        insertFiliere("Electromécanique des Systèmes Automatisées","","","",
+                "Le \"Technicien Spécialisé Electromécanicien des Systèmes Automatisés\" est un professionnel chargé de maintenir, dans des conditions les plus optimales, le fonctionnement des systèmes automatisés d’une entreprise.",
+                "Suite à quelques années d’expérience, et après avoir démontré ses compétences et son ambition professionnelle, le Technicien Spécialisé Electromécanicien des Systèmes Automatisés se verra confié des responsabilités plus importantes au niveau de l’autonomie et de la gestion des difficultés techniques des interventions, ainsi que de suivi de divers projets de l’entreprise.",
+                "Age limite : 26 ans pour les bacheliers et 30 ans\n" +
+                        "pour les licenciés\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de responsabilité, de l’organisation et de la discipline\n" +
+                        " • Esprit d’ Autonomie, d’analyse, de créativité et d’initiative\n" +
+                        " • Aisance en relations humaines\n" +
+                        " • Maîtrise de soi, Passion pour la technologie et ambition pour la promotion professionnelle\n" +
+                        "\n" +
+                        "Contre-indications pour exercer ce métier : handicap physique (problème de colonne vertébrale), problème de vue ou de distinction de couleur, maladie du cœur, maladie nerveuse.\n" +
+                        "Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Entretiens après présélection.",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        " • Installer des câbles et des canalisations\n" +
+                        " • Dépanner des circuits électroniques de puissance\n" +
+                        " • Installer les divers raccordements et entretenir les luminaires\n" +
+                        " • Installer et entretenir les commandes à très basse tension\n" +
+                        " • Installer, raccorder et entretenir des transformateurs\n" +
+                        " • Installer et Repérer des moteurs et des génératrices à CC\n" +
+                        " • Monter des circuits hydrauliques\n" +
+                        " • Installer et Repérer des moteurs et des génératrices à CA\n" +
+                        " • Installer et entretenir divers systèmes d’alarme et de signalisation\n" +
+                        " • Installer, Repérer les commandes électroniques de moteurs\n" +
+                        " • Installer et dépanner des moteurs et de génératrices à CC\n" +
+                        " • Installer et dépanner des moteurs et des génératrices à CA\n" +
+                        " • Installer, Repérer des commandes électroniques des moteurs\n" +
+                        " • Réaliser un système automatisé");
+        insertFiliere("Techniques des Réseaux Informatiques","","","",
+                "Le Technicien Spécialisé en Réseaux Informatiques est un professionnel chargé d’exploiter, sécuriser, optimiser et faire évoluer les ressources informatiques de l’entreprise.Il est le garant de la qualité du service attendu par l’informatique. Il prend en charge le support technique auprès des utilisateurs et apporte des solutions aux différents problèmes qu’ils rencontrent dans l’utilisation des moyens informatiques.",
+                "Après quelques années d’expériences réussies, le Technicien Spécialisé en Réseaux Informatiques peut évoluer vers des fonctions d’encadrement ou d’expertise technique.",
+                "Age limite : 23 ans\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de responsabilité, de l’organisation et de la discipline\n" +
+                        " • Capacités d’analyse et de synthèse\n" +
+                        " • Sens du service\n" +
+                        " • Autonomie,\n" +
+                        " • Esprit d’initiative\n" +
+                        " • Aisance en relations humaines\n" +
+                        " • Maîtrise de soi\n" +
+                        " • Curiosité pour les nouvelles technologies de l’information\n" +
+                        "\n" +
+                        "Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Entretiens après présélection.",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        " • Au niveau du support technique\n" +
+                        " • Assurer un support technique auprès des utilisateurs de l’informatique\n" +
+                        " • Assurer la gestion du parc informatique de l’entreprise\n" +
+                        " • Suivre et faire évoluer le dispositif informatique\n" +
+                        " • Diagnostiquer et résoudre les problèmes sur les postes de travail et serveurs d’entreprise\n" +
+                        " • Suivre et organiser le suivi des pannes et des interventions auprès des utilisateursAu niveau de la maintenance \n" +
+                        " • Dépanner les micro-ordinateurs, les serveurs, le réseau\n" +
+                        " • Suivre et faire évoluer les systèmes d’exploitationAu niveau système\n" +
+                        " • Installer et administrer un poste de travail\n" +
+                        " • Installer et administrer un système d’exploitation réseau\n" +
+                        " • Installer et administrer les serveurs d’application (messagerie, serveur web,..) Au niveau du réseau \n" +
+                        " • Concevoir et planifier l’implantation d’un réseau local d’entreprise\n" +
+                        " • Participer au câblage du réseau\n" +
+                        " • Assurer la gestion et la supervision d’un réseau informatique\n" +
+                        " • Diagnostiquer et résoudre les problèmes du réseau informatique\n" +
+                        " • Installer, gérer et sécuriser les éléments actifs d’un réseau étendu");
+        insertFiliere("Technico-Commercial en Vente de Véhicules et Pièces de Rechange","","","",
+                ".",
+                "Le Technico-commercial en Vente de Véhicules et Pièces de Rechange peut prétendre à plusieurs postes en entreprise tels que :\n" +
+                        "\n" +
+                        " • Réceptionniste\n" +
+                        " • Technicien de vente\n" +
+                        " • Magasinier\n" +
+                        " • Agent en garantie\n" +
+                        "\n" +
+                        "Pour certains, la création de leur propre entreprise de vente de véhicules et/ou de pièces de rechange est une opportunité.",
+                "Age limite : 26 ans pour les bacheliers et 30 ans\n" +
+                        "pour les licenciés\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de responsabilité, de l’organisation et de la discipline\n" +
+                        " • Esprit d’ Autonomie, d’analyse, de créativité et d’initiative\n" +
+                        " • Aisance en relations humaines\n" +
+                        " • Maîtrise de soi et l’ambition pour la promotion professionnelle.\n" +
+                        "\n" +
+                        "Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Entretiens après présélection",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        " • Entretenir périodiquement des véhicules automobiles\n" +
+                        " • Entretenir et Repérer un système hydraulique\n" +
+                        " • Entretenir les organes de la transmission\n" +
+                        " • Contrôler les éléments de tenue de la roue\n" +
+                        " • Contrôler et Repérer les systèmes de freinage\n" +
+                        " • Entretenir et Repérer la carrosserie d’un véhicule automobile\n" +
+                        " • Interpréter le comportement des acheteurs\n" +
+                        " • Assurer la qualité du service à la clientèle\n" +
+                        " • Présenter un produit, un service ou un système\n" +
+                        " • Vendre en magasin\n" +
+                        " • Gérer les encaissements\n" +
+                        " • Appliquer les techniques du Marketing\n" +
+                        " • Promouvoir un produit, un service ou un système");
+        insertFiliere("Technicien spécialisé en Diagnostic et Electronique Embarquée","","","",
+                "Le Technicien Spécialisé en Diagnostic et Electronique Embarquée est un professionnel chargé de gérer les services après-vente, d’animer des équipes en dialoguant au sein de l’entreprise avec les intervenants et la clientèle, de promouvoir les services et la vente des produits de son entreprise. Il s'occupe également du diagnostic et de la remise en conformité des systèmes technologiques rencontrés dans les véhicules modernes",
+                "Le lauréat peut prétendre au poste de responsable de services après vente, de conseiller en matière d’achat automobile et de maintenance d’un parc automobile. Il peut également lancer sa propre entreprise moyennant une formation complémentaire en gestion et économie.",
+                "\n" +
+                        "\n" +
+                        "Age limite : 26 ans pour les bacheliers et 30 ans\n" +
+                        "pour les licenciés\n" +
+                        "\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Conscience professionnelle\n" +
+                        " • Sens de l’organisation\n" +
+                        " • Sens de responsabilité\n" +
+                        " • Sens de la sécurité\n" +
+                        " • Maîtrise de soi\n" +
+                        " • Sens de l'initiative.\n" +
+                        "\n" +
+                        "Mode de sélection des candidats :\n" +
+                        " • Dossier d'orientation à remplir\n" +
+                        " • Entretiens après présélection.",
+                "");
+        insertFiliere("Infographie","","","",
+                "Le \"Technicien Spécialisé en Infographie\" est un professionnel chargé de réaliser des produits de prépresse destinés à l’impression et à l’édition.",
+                "L’infographiste ayant une expérience de 4 à 5 ans peut accéder, avec la mise à niveau de ses connaissances, à un poste de direction de production. Avec une formation supplémentaire, il peut aussi s’orienter vers le graphisme et l’animation 3D. Pour certains candidats, la création d’un atelier de service dans ce domaine, constitue une véritable opportunité à saisir.",
+                "\n" +
+                        "Age limite : 30 ans\n" +
+                        "pour les bacheliers et les licenciés\n" +
+                        "Niveau scolaire minimum requis : Bacheliers toutes options\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Motivation personnelle,\n" +
+                        " • Connaissance des outils de représentation,\n" +
+                        " • Capacité d’observation et d’écoute,\n" +
+                        " • Capacité de travail en groupe,\n" +
+                        " • Capacité d’analyse et de synthèse,\n" +
+                        "\n" +
+                        "Mode de sélection des candidats :\n" +
+                        " • Présélection sur dossier\n" +
+                        " • Entretien après présélection.",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        "\n" +
+                        " • Réaliser la maquette du produit\n" +
+                        " • Traiter le contenu du produit\n" +
+                        " • Réaliser la mise en page\n" +
+                        " • Produire les films et les plaques d’impression");
+        insertFiliere("TS Traitement de surface","","","",
+                "Le « Technicien Spécialisé en Traitement de Surface » est un professionnel amené à exercer le métier de traitement de surface dans de nombreux secteurs industriels, et plus particulièrement :\n" +
+                        "l’automobile, l’aéronautique, la micromécanique, l’horlogerie et la bijouterie. Cela peut concerner aussi les entreprises de formulation de peintures et revêtements.Les traitements et les revêtements de surface sont destinés à protéger, à embellir ou à conférer des propriétés particulières à une surface en la modifiant de différentes manières. Ces traitements peuvent être chimiques ou électrolytiques. Ils doivent être précédés d’une préparation soignée :\n" +
+                        "dégraissage et décapage (avant traitement), métallisation, anodisation, phosphatation et la mise en peinture.",
+                "Le lauréat peut être employé par des entreprises spécialisées dans le secteur aéronautique. Ces entreprises sont le plus souvent des sous-traitants d’entreprises internationales, voire des ateliers déportés de celles-ci.Selon les aptitudes qu’il démontre, progresser vers un poste de responsabilité : chef de groupe, contremaître, chef d’équipe.",
+                "Age limite : 30 ans\n" +
+                        "pour les bacheliers et les licenciés\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de responsabilité, de l’organisation et de la discipline\n" +
+                        " • Esprit d’ Autonomie, d’analyse, de créativité et d’initiative\n" +
+                        " • Aisance en relations humaines\n" +
+                        " • Maîtrise de soi, Passion pour la technologie et l’ambition pour la promotion professionnelle.\n" +
+                        "\n" +
+                        "Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Entretiens après présélection.",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        "\n" +
+                        " • Gérer un atelier de traitement de surface\n" +
+                        " • Analyser les matières premières et les produits finis\n" +
+                        " • Effectuer les traitements (chimique, électrolytique) sur les métaux (aciers, aluminium...) Afin de les protéger des agressions mécaniques ou chimiques corrosives\n" +
+                        " • Veiller à l'application des règles de sécurité et au respect des normes environnementales\n" +
+                        " • Assurer la maintenance des équipements de production\n" +
+                        "\n" +
+                        "Il assure aussi, la commercialisation des produits");
+//        insertFiliere("Technicien Spécialisé Bureau d’Etudes en Automobile","","","",
+//                "","","","");
+        insertFiliere("Maintenance des Machines Outils et Autres Machines de Production Automatisée","",
+                "",
+                "",
+                "Ce Technicien Spécialisé est chargé de la maintenance électromécanique et électronique des machines outils et autres machines à commande numérique. Son rayon d’action touche toutes les entreprises ayant un grand parc de machines modernes de production en série.",
+                "Le lauréat peut prétendre à un emploi dans les grandes entreprises spécialisées dans la maintenance électromécanique et électronique des machines outils et autres machines à commande numérique. Après quelques années d’expérience, de formation continue et après avoir démontré ses compétences professionnelles, le Technicien Spécialisé en Maintenance des machines outils et autres machines à production automatique se verra confié des responsabilités plus importantes au niveau du suivi des divers projets de l’entreprise.",
+                        "Age limite : 26 ans pour les bacheliers et 30 ans\n" +
+                        "pour les licenciés\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de responsabilité, de l’organisation et de la discipline\n" +
+                        " • Esprit d’ Autonomie, d’analyse, de créativité et d’initiative\n" +
+                        " • Aisance en relations humaines\n" +
+                        " • Maîtrise de soi, Passion pour la technologie et ambition pour la promotion professionnelle\n" +
+                        "\n" +
+                        "Contre-indications pour exercer ce métier : handicap physique (problème de colonne vertébrale), problème de vue ou de distinction de couleur, maladie du cœur, maladie nerveuse.\n" +
+                        "Mode de sélection des candidats :\n" +
+                        "\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Entretiens après présélection.",
+                        "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        "\n" +
+                        " • Détecter et remédier aux pannes des systèmes mécaniques, électriques et hydrauliques\n" +
+                        " • Installer et entretenir des moteurs à courant alternatif\n" +
+                        " • Installer et entretenir des moteurs à courant continu\n" +
+                        " • Démonter et monter des systèmes mécaniques\n" +
+                        " • Programmer des systèmes à commande numérique\n" +
+                        " • Repérer des unités d’un système de contrôle numérique");
+        insertFiliere("Maintenance des Machines et Outillage en Plasturgie","","","",
+                "Le rôle d’un Technicien Spécialisé en Maintenance des Machines et des Outillages en Plasturgie est d’assurer le bon fonctionnement de tout le matériel de l’atelier. Ainsi, il assure la maintenance du parc des Machines de production, des outillages montés sur les machines, des périphériques qui accompagnent le fonctionnement des machines de production et des installations des fluides nécessaires au fonctionnement des différents organes de l’atelier.",
+                "Suite à quelques années d’expérience, et après avoir démontré ses compétences professionnelles, le Technicien Spécialisé en Maintenance des Machines et Outillages en Plasturgie peut évoluer vers :\n" +
+                        " • Un poste de Responsable de maintenance ou responsable de production.\n" +
+                        " • Le métier de mouliste.",
+                "Age limite : 30 ans\n" +
+                        "pour les bacheliers et les licenciés\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de responsabilité, de l’organisation et de la discipline\n" +
+                        " • Esprit d’ Autonomie, d’analyse, de créativité et d’initiative\n" +
+                        " • Aisance en relations humaines\n" +
+                        " • Maîtrise de soi, Passion pour la technologie et l’ambition pour la promotion professionnelle.\n" +
+                        "\n" +
+                        "Contre-indications à l'exercice du métier handicap physique (problème de colonne vertébrale), problème de vue ou de distinction de couleur, maladie du cœur, maladies nerveuses, asthme.\n" +
+                        "Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Entretiens après présélection.",
+                "A l’issue de la formation, le lauréat sera en mesure d'exécuter les activités suivantes :\n" +
+                        " • Assurer la maintenance préventive et curative des machines\n" +
+                        " • Assurer la maintenance des outillages\n" +
+                        " • Participer à la conception et l’amélioration des outillages\n" +
+                        " • Gérer les pièces de rechange\n" +
+                        " • Respecter la sécurité et la qualité");
 //        insertFiliere("Technicien Spécialisé en Production et Qualité en Automobile","","","","","","","");
-//        insertFiliere("Technicien Spécialisé Bureau d'Etude en Construction Métallique","","","","","","","");
+        insertFiliere("Technicien Spécialisé Bureau d'Etude en Construction Métallique","","","",
+                "La mission principale du Technicien Spécialisé du Bureau d’Etude en Construction Métallique est de participer à la conception et à l’étude d’ensembles en construction métallique. Il peut également Préparer et organiser la fabrication de prototypes.",
+                "Le lauréat peut être employé par des établissements de nature et d’importance les plus diverses allant de l’entreprise artisanale à la grande société industrielle.Le Technicien Spécialisé de Bureau d’Etude en Construction Métallique est amené à exercer dans :\n" +
+                        "\n" +
+                        " • Un bureau d’Etude\n" +
+                        " • Un service méthode ou de préparation du travail\n" +
+                        " • Un bureau de gestion de production\n" +
+                        " • Un service gestion de la qualité\n" +
+                        " • Dans des chantiers",
+                "Age limite : 23 ans\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de responsabilité, de l’organisation et de la discipline\n" +
+                        " • Esprit d’ Autonomie, d’analyse, de créativité et d’initiative\n" +
+                        " • Aisance en relations humaines\n" +
+                        " • Maîtrise de soi, Passion pour la technologie et l’ambition pour la promotion professionnelle.\n" +
+                        "\n" +
+                        "Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Entretiens après présélection",
+                "");
 //        insertFiliere("Usinage sur MOCN option METHODE FAO Outillage de presse","","","","","","","");
-//        insertFiliere("Usinage sur MOCN option USINAGE Outillage de presse","","","","","","","");
-//        insertFiliere("Mécatronique","","","","","","","");
+        insertFiliere("Usinage sur MOCN option USINAGE Outillage de presse","","","",
+                "Le Technicien Spécialisé en Usinage sur MOCN Option : usinage outillage de presse effectue des tâches polyvalentes dans le domaine de l’usinage, de la préparation des moyens, de la conduite des machines et du suivi de la production. Il exerce son métier dans des entreprises du secteur automobile spécialisées en usinage d’outillage de presse. Il peut, aussi, apporter son expertise dans des entreprises aux activités industrielles diversifiées où la fabrication de pièces sur MOCN est l’une des activités principales.\n" +
+                        "\n" +
+                        "D’un travail très technique où la dextérité de l’opérateur est prépondérante, on arrive à un métier « automatisé » qui fait appel à des moyens de haute technologie utilisant des machines très performantes avec des chaînes numériques et des systèmes asservis. Dans un contexte internationale caractérisé par une vive concurrence, les opérateurs du secteurs sont à la recherche permanente de la productivité maximale. Les pièces usinées sont de plus en plus complexes d'un point de vue morphologique et dimensionnel. Les matériaux évoluent en permanence pour atteindre des niveaux de caractéristiques mécaniques très élevés les rendant plus difficiles à usiner.",
+                "Après quelques années d’expérience et après avoir démontré ses compétences professionnelles, le technicien spécialisé en usinage sur MOCN Option : USINAGE Outillage de presse pourra évoluer vers le poste de responsable d’atelier de fabrication ou de bureau de méthodes. Cette formation lui permettra également de travailler dans toute entreprise où l’activité d’usinage sur MOCN est présente.",
+                "\n" +
+                        "\n" +
+                        "Age maximum : 23 ans\n" +
+                        "Niveau Scolaire : Baccalauréat scientifique ou technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens des responsabilités, de l’organisation et de la discipline\n" +
+                        " • Esprit d’autonomie, d’analyse, de créativité et d’initiative\n" +
+                        " • Bonnes relations humaines\n" +
+                        " • Maîtrise de soi, motivation pour la technologie et ambition pour la promotion professionnelle\n" +
+                        "\n" +
+                        "Contre-indications : handicap physique (problème de colonne vertébrale), problème de vue ou de distinction de couleur, maladie du cœur, maladies nerveuses.\n" +
+                        "\n" +
+                        "Mode de sélection des candidats à la formation :\n" +
+                        "\n" +
+                        " • Remplissage du dossier d’orientation\n" +
+                        " • Réussite aux entretiens après présélection",
+                "");
+        insertFiliere("Mécatronique","","","",
+                "Le \"Technicien Spécialisé en Mécatronique (aéronautique/automobile)\" intervient dans des différentes opérations liées au domaine de l'aéronautique et l'automobile, à savoir:\n" +
+                        "les équipements électroniques, électriques, électromécaniques, pneumatiques ou hydrauliques, le câblage électrique, les instruments de bord, la radionavigation, le pilotage automatique et le système radar etc.Il exerce son métier dans des entreprises spécialisées dans la fourniture de composants pour l’aéronautique/l'automobile avec une partie câblage électrique ou cartes électroniques. Il peut travailler au sein d'entreprises qui opérent dans le secteur industriel dans les domaines aéronautique/automobile, et disposent du matériel de production avec une dimension électrique importante. C'est un métier qui requiert de la polyvalence pour mener à bien différentes opérations. Parmi les activités qui incombent au Technicien Spécialisé en Mécatronique dans le domaine de la production ou l’installation des composants électriques et électroniques, Il gère:\n" +
+                        "le câblage, l'installation des connecteurs, la soudure des différents composants, la conduction des machines, le contrôle des systèmes, la maintenance préventuve, les visites, la mesure des grandeurs, l'établissement des bons de travaux, la saisie des données, le diagnostic, la détection des pannes, la réparation et le changement des organes, l'entretien des équipements électriques, la conduite d'études, le chiffrage, l'assemblage de tout type de composants (électriques, électroniques, hydrauliques, pneumatiques etc.), et la réalisation de schémas électriques. En plus de l'installation, la vérification et le montage, Il fait des essais sur le produit. Au niveau des équipements de production, le Technicien opère plus précisément sur des armoires de commande, des moteurs, des automates programmables, des variateurs de vitesse, des valves, des pompes, des systèmes hydrauliques, des systèmes pneumatiques, des convoyeurs, des éléments de transmission. En vue de garantir le bon fonctionnement des équipements, Il vérifie la conformité et le fonctionnement d'un équipement nouvellement installé, et procède à de nombreuses tâches telles que la validation de l'architecture d'un automatisme, l'ajustement ou l'étalonnement des chaînes de régulation, la programmation des automates. Il apporte toute modification nécessaire à la chaîne de production et participe à des arrêts de maintenance.",
+                "Ce technicien spécialisé doit être très autonome, posséder une maturité d’esprit et avoir une bonne présentation. Il doit être disponible, méthodique et posséder une bonne faculté d’observation et de déduction.Les techniciens Spécialisés de Mécatronique (aéronautique/automobile) exercent leurs fonctions dans les entreprises manufacturières et les industries de production. Ils sont à l’emploi de moyennes et grosses entreprises possédant un parc d’équipements qui permet le contrôle et la commande des procédés industriels. Ces techniciens sont employés surtout par les entreprises possédant des systèmes de mesure de grandeurs physiques et de contrôle des procédés. La marge de manœuvre dont ils disposent s'inscrit dans le cadre des limites imposées par la réglementation, les méthodes de travail de l’entreprise et les certifications dont elle dispose.",
+                "Age limite : 26 ans pour les bacheliers et 30 ans\n" +
+                        "pour les licenciés\n" +
+                        "Niveau scolaire minimum requis : Diplôme du Baccalauréat Scientifique ou Technique\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " • Sens de responsabilité, de l’organisation et de la discipline\n" +
+                        " • Esprit d’ Autonomie, d’analyse, de créativité et d’initiative\n" +
+                        " • Aisance en relations humaines\n" +
+                        " • Maîtrise de soi, Passion pour la technologie et ambition pour la promotion professionnelle\n" +
+                        "\n" +
+                        "Contre-indications pour exercer ce métier : handicap physique (problème de colonne vertébrale), problème de vue ou de distinction de couleur, maladie du cœur, maladie nerveuse.\n" +
+                        "Mode de sélection des candidats :\n" +
+                        "\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Entretiens après présélection",
+                        "A l’issue de la formation le technicien spécialisé doit être capable de :\n"+
+                        " • Veiller au bon fonctionnement des équipements électroniques et électriques de l'aéronef/automobile et notamment des instruments de bord, de la radionavigation, du pilotage automatique, du système radar, des câblages électriques\n" +
+                        " • Effectuer des opérations de contrôle\n" +
+                        " • Câbler des composants électriques\n" +
+                        " • Installer des composants électroniques sur des cartes\n" +
+                        " • Tester le fonctionnement de systèmes électriques ou électromécaniques\n" +
+                        " • Installer des connecteurs\n" +
+                        " • Souder des composants\n" +
+                        " • Effectuer la maintenance de premier niveau\n" +
+                        " • Installer des isolants électriques\n" +
+                        " • Créer et analyser des schémas électriques\n" +
+                        " • Intervenir sur des réseaux de transmission de données\n" +
+                        " • Mesurer des grandeurs électriques\n" +
+                        " • Calibrer des signaux\n" +
+                        " • Installer des armoires électriques\n" +
+                        " • Installation électriques, hydrauliques, pneumatiques\n" +
+                        " • Détecter une panne ou un dysfonction des préactionneurs et actionneurs (étonnement\n" +
+                        " • Décider des réparations à effectuer après un diagnostic\n" +
+                        " • Déposer/reposer, monter/démonter, entretenir, Repérer les systèmes avionique\n" +
+                        " • Effectuer, lire et Interpréter des relevés de paramètres\n" +
+                        " • Maîtriser l'utilisation de matériels de mesure pour effectuer des tests\n" +
+                        " • Respecter les engagements de qualité, coûts et délais\n" +
+                        " • Participer au lancement d’une nouvelle production\n" +
+                        " • Gérer une production\n" +
+                        " • Encadrer le personnel d’exécution et contrôler son travail\n" +
+                        " • Lire un plan et appliquer avec rigueur la documentation technique\n" +
+                        " • Réaliser des documents techniques\n" +
+                        " • Lire l'anglais technique\n" +
+                        " • Organiser ses interventions");
 
 
 //        "Menuiserie Aluminium "
@@ -776,6 +1117,11 @@ public class OfpptDataWorker {
 //        "Usinage sur MOCN option METHODE FAO Outillage de presse"
 //        "Usinage sur MOCN option USINAGE Outillage de presse"
 //        "Mécatronique"
+
+//        "Technicien Spécialisé Bureau d’Etudes en Automobile"
+//        "Technicien en Fabrication Mécanique option Montage / Ajustage Outillage de presse"
+//        "Technicien Spécialisé en Production et Qualité en Automobile"
+//        "Usinage sur MOCN option METHODE FAO Outillage de presse"
     }
 
 
