@@ -9,6 +9,7 @@
 
     <color name="dark">#212121</color>
     <color name="light_gray">#f1f1f1</color>
-    <color name="green">#108e56</color>
+    <color name="green">#CC108e56</color>
+    <color name="blue_Op">#CC165ba1</color>
     <color name="blue">#165ba1</color>
 </resources>

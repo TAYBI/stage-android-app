@@ -79,9 +79,9 @@ public class MainActivity extends AppCompatActivity{
     private void set_visiteur_num() {
         Cursor res =  db.getAllUsers();
         if (res.getCount() > 1)
-            counter = "Visiteurs: " + res.getCount();
+            counter = "Visiteurs " + res.getCount();
         else
-            counter = "Visiteur: " + res.getCount();
+            counter = "Visiteur " + res.getCount();
         visiteurs.setText(counter);
     }
 

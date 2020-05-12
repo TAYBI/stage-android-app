@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg_black"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -36,25 +36,27 @@
                 android:id="@+id/visiteurs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="cursive"
                 android:layout_gravity="start"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="35dp"
-                android:paddingLeft="2dp"
+                android:layout_marginTop="55dp"
+                android:fontFamily="cursive"
+                android:paddingLeft="20dp"
                 android:text="Visiteur: "
-                android:textSize="@dimen/text_mud"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:textSize="@dimen/text_big" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/white"
+                android:background="@drawable/up_raduis_curners"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -68,7 +70,8 @@
                 <EditText
                     android:id="@+id/cin"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -77,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/white"
+                android:background="#CCFFFFFF"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -93,7 +96,8 @@
                 <EditText
                     android:id="@+id/prenom"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp" />
 
             </LinearLayout>
 
@@ -103,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/white"
+                android:background="#CCFFFFFF"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -119,7 +123,8 @@
                 <EditText
                     android:id="@+id/nom"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp" />
 
             </LinearLayout>
 
@@ -129,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/white"
+                android:background="#CCFFFFFF"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -146,6 +151,7 @@
                     android:id="@+id/dat_naiss"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
                     android:hint="aaaa/mm/jj" />
 
             </LinearLayout>
@@ -156,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/white"
+                android:background="#CCFFFFFF"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -173,6 +179,7 @@
                     android:id="@+id/spinner_niveau_scolaire"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -183,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/white"
+                android:background="#CCFFFFFF"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -200,6 +207,7 @@
                     android:id="@+id/spinner_niveau_formation"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -210,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/white"
+                android:background="#CCFFFFFF"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -227,6 +235,7 @@
                     android:id="@+id/spinner_secteur"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -237,15 +246,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/white"
+                android:background="@drawable/down_raduis_curners"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:padding="10dp"
+                   android:padding="10dp"
                     android:text="Filiere: "
                     android:textColor="@color/dark"
                     android:textSize="@dimen/text_mud" />
@@ -254,19 +266,24 @@
                     android:id="@+id/spinner_filiere"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
 
             <Button
                 android:id="@+id/valider"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="4dp"
-                android:backgroundTint="@color/green"
-                android:text="valider"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/ic_send_black_24dp"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="valider  "
                 android:textColor="@android:color/white" />
         </LinearLayout>
     </ScrollView>
