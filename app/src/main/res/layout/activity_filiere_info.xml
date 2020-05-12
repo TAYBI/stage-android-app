@@ -24,7 +24,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:background="#CCFFFFFF"
+                android:background="@drawable/light_raduis_curners"
                 android:orientation="vertical"
                 android:padding="8dp">
 
@@ -54,7 +54,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="#CCFFFFFF"
+                android:background="@drawable/light_raduis_curners"
                 android:orientation="vertical"
                 android:padding="8dp">
 
@@ -83,7 +83,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="#CCFFFFFF"
+                android:background="@drawable/light_raduis_curners"
                 android:orientation="vertical"
                 android:padding="8dp">
 
@@ -112,7 +112,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="#CCFFFFFF"
+                android:background="@drawable/light_raduis_curners"
                 android:orientation="vertical"
                 android:padding="8dp">
 
