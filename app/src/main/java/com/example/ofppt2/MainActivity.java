@@ -206,8 +206,8 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void fillSpinner(Spinner spinner, List<String> list) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.color_spinner_layout, list);
+        adapter.setDropDownViewResource(R.layout.spinner_dopdown_layout);
 
         spinner.setAdapter(adapter);
     }

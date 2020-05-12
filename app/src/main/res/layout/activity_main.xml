@@ -73,7 +73,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:fontFamily="@font/dosis" />
+                    android:fontFamily="@font/dosis"
+                    android:textColor="#333" />
             </LinearLayout>
 
             <LinearLayout
@@ -101,7 +102,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:fontFamily="@font/dosis" />
+                    android:fontFamily="@font/dosis"
+                    android:textColor="#333" />
 
             </LinearLayout>
 
@@ -130,7 +132,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:fontFamily="@font/dosis" />
+                    android:fontFamily="@font/dosis"
+                    android:textColor="#333" />
 
             </LinearLayout>
 
@@ -160,7 +163,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:fontFamily="@font/dosis"
-                    android:hint="aaaa/mm/jj" />
+                    android:hint="aaaa/mm/jj"
+                    android:textColor="#333" />
 
             </LinearLayout>
 
@@ -296,11 +300,12 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/custom_button"
                 android:drawableRight="@drawable/ic_send_black_24dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/dosis"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="valider  "
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
         </LinearLayout>
     </ScrollView>
 
