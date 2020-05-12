@@ -26,9 +26,9 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         db.execSQL(UsersEntry.SQL_CREATE_TABLE);
 
         OfpptDataWorker worker = new OfpptDataWorker(db);
+        worker.insertFiliers();
         worker.insertNivaux();
         worker.insertSecteurs();
-        worker.insertFiliers();
     }
 
     @Override
@@ -65,7 +65,7 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         return  res;
     }
 
-    public boolean insertUser(String cin,String name, String lname, String date, String niveau_scolaire, String niveau_formation, String secteure, String filiere){
+    public void insertUser(String cin,String name, String lname, String date, String niveau_scolaire, String niveau_formation, String secteure, String filiere){
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
@@ -78,9 +78,10 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         values.put(UsersEntry.COLUMN_SECTEURE, secteure);
         values.put(UsersEntry.COLUMN_FILIERE, filiere);
 
-        long newRowId = db.insert(UsersEntry.TABLE_NAME, null, values);
-        if (newRowId == -1) return false;
-        else return true;
+//        long newRowId =
+        db.insert(UsersEntry.TABLE_NAME, null, values);
+//        if (newRowId == -1) return false;
+//        else return true;
     }
 
     public  Cursor useExisted(String cin){

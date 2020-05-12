@@ -90,7 +90,6 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 add_user();
-
                 Intent intent = new Intent(MainActivity.this, Filiere_info.class);
                 String filereString = mSpinnerFiliere.getSelectedItem().toString();
                 filiere = dm.getFiliere(filereString);
@@ -114,7 +113,8 @@ public class MainActivity extends AppCompatActivity{
 
     private void load_Filieres_data() {
         Cursor res =  db.getAllFilieres();
-        if(res.getCount() == 0){
+        int i = res.getCount();
+        if(i == 0){
             showMessage("Error", "No data found");
         }
         while (res.moveToNext()){

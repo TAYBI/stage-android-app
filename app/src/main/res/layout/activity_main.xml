@@ -61,6 +61,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/dosis"
                     android:gravity="center_vertical"
                     android:padding="10dp"
                     android:text="Cin: "
@@ -71,7 +72,8 @@
                     android:id="@+id/cin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp" />
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/dosis" />
             </LinearLayout>
 
             <LinearLayout
@@ -87,6 +89,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/dosis"
                     android:gravity="center_vertical"
                     android:padding="10dp"
                     android:text="Prenom: "
@@ -97,7 +100,8 @@
                     android:id="@+id/prenom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp" />
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/dosis" />
 
             </LinearLayout>
 
@@ -114,6 +118,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/dosis"
                     android:gravity="center_vertical"
                     android:padding="10dp"
                     android:text="Nom: "
@@ -124,7 +129,8 @@
                     android:id="@+id/nom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp" />
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/dosis" />
 
             </LinearLayout>
 
@@ -141,6 +147,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/dosis"
                     android:gravity="center_vertical"
                     android:padding="10dp"
                     android:text="Date Nais: "
@@ -152,6 +159,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/dosis"
                     android:hint="aaaa/mm/jj" />
 
             </LinearLayout>
@@ -169,6 +177,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/dosis"
                     android:gravity="center_vertical"
                     android:padding="10dp"
                     android:text="Niveau scolaire: "
@@ -180,7 +189,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="10dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:theme="@style/SpinnerTheme" />
 
             </LinearLayout>
 
@@ -197,6 +207,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/dosis"
                     android:gravity="center_vertical"
                     android:padding="10dp"
                     android:text="Niveau de formation: "
@@ -208,7 +219,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="10dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:theme="@style/SpinnerTheme" />
 
             </LinearLayout>
 
@@ -225,6 +237,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/dosis"
                     android:gravity="center_vertical"
                     android:padding="10dp"
                     android:text="Secteur: "
@@ -236,7 +249,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="10dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:theme="@style/SpinnerTheme" />
 
             </LinearLayout>
 
@@ -256,8 +270,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/dosis"
                     android:gravity="center_vertical"
-                   android:padding="10dp"
+                    android:padding="10dp"
                     android:text="Filiere: "
                     android:textColor="@color/dark"
                     android:textSize="@dimen/text_mud" />
@@ -267,7 +282,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="10dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:theme="@style/SpinnerTheme" />
 
             </LinearLayout>
 
