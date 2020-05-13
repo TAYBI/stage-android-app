@@ -157,14 +157,37 @@
                     android:textColor="@color/dark"
                     android:textSize="@dimen/text_mud" />
 
-                <EditText
-                    android:id="@+id/dat_naiss"
+<!--                <Button-->
+<!--                    android:id="@+id/dat_naiss"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:background="@drawable/date_picker_button"-->
+<!--                    android:drawableLeft="@drawable/ic_today_black_24dp"-->
+<!--                    android:fontFamily="@font/dosis"-->
+<!--                    android:text="       aaaa/mm/jj"-->
+<!--                    android:textColor="#333"-->
+<!--                    android:textSize="13sp" />-->
+                <LinearLayout
+                    android:id="@+id/hh"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:fontFamily="@font/dosis"
-                    android:hint="aaaa/mm/jj"
-                    android:textColor="#333" />
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/date_picker_button" />
+                    <TextView
+                        android:id="@+id/dat_naiss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dosis"
+                        android:text="  aaaa/mm/jj"
+                        android:drawableLeft="@drawable/ic_today_black_24dp"
+                    android:textColor="#333"
+                        android:textSize="13sp"/>
+                </LinearLayout>
 
             </LinearLayout>
 

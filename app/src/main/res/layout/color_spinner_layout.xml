@@ -6,6 +6,8 @@
     android:textSize="@dimen/text_mud"
     android:fontFamily="@font/dosis"
     android:padding="10dp"
-    android:textColor="#000">
+    android:textColor="#000"
+    android:ellipsize="end"
+    android:maxLines="1">
 
 </CheckedTextView>

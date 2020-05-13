@@ -1,5 +1,6 @@
 package com.example.ofppt2;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
@@ -9,7 +10,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,18 +23,19 @@ import com.example.ofppt2.classes.Secteur;
 import com.example.ofppt2.database.OfpptOpenHelper;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
     DataManager dm;
     OfpptOpenHelper db;
     Filiere filiere;
-    TextView visiteurs;
-    EditText cin, nom, prenom, dat_nais;
+    TextView visiteurs, dat_nais;
+    EditText cin, nom, prenom;
     Spinner mSpinnerNiveauFormation, mSpinnerNiveauScolaire, mSpinnerSecteur, mSpinnerFiliere;
     Button valider;
-    private String niveaFormation, secteurs, filieres, niveauScolaire, counter;
+    private String niveaFormation, secteurs, filieres, niveauScolaire, counter, date;
 
             @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +50,13 @@ public class MainActivity extends AppCompatActivity{
         cin = (EditText) findViewById(R.id.cin);
         nom = (EditText) findViewById(R.id.nom);
         prenom = (EditText) findViewById(R.id.prenom);
-        dat_nais = (EditText) findViewById(R.id.dat_naiss);
+        dat_nais = (TextView) findViewById(R.id.dat_naiss);
+
+        int year = Calendar.getInstance().get(Calendar.YEAR) - 18;
+        date = "   " + year + "/" +
+                Calendar.getInstance().get(Calendar.MONTH)  +"/" +
+                Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+        dat_nais.setText(date);
 
         visiteurs = (TextView) findViewById(R.id.visiteurs);
         valider = (Button) findViewById(R.id.valider);
@@ -66,7 +76,27 @@ public class MainActivity extends AppCompatActivity{
         load_Secteur_Par_Niveau_Formation();
         load_Filiere_Par_Secteur();
 
+        handle_pick_date_click();
+
         handleValiderClick();
+    }
+
+    private void handle_pick_date_click() {
+        dat_nais.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPickerDailog();
+            }
+        });
+    }
+
+    private void showPickerDailog() {
+        DatePickerDialog pickerDialog = new DatePickerDialog(this, R.style.DialogTheme,
+                this,
+                Calendar.getInstance().get(Calendar.YEAR),
+                Calendar.getInstance().get(Calendar.MONTH),
+                Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
+        pickerDialog.show();
     }
 
     @Override
@@ -103,7 +133,8 @@ public class MainActivity extends AppCompatActivity{
 
         if(db.useExisted(cin.getText().toString()).getCount() == 0)
         {
-             db.insertUser(cin.getText().toString(), prenom.getText().toString(), nom.getText().toString(), dat_nais.getText().toString(),
+            String dn = dat_nais.getText().toString().substring(3);
+             db.insertUser(cin.getText().toString(), prenom.getText().toString(), nom.getText().toString(), dn,
                     mSpinnerNiveauScolaire.getSelectedItem().toString(),
                     mSpinnerNiveauFormation.getSelectedItem().toString(),
                     mSpinnerSecteur.getSelectedItem().toString(),
@@ -111,18 +142,20 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    // HACK:
     private void load_Filieres_data() {
-        Cursor res =  db.getAllFilieres();
-        int i = res.getCount();
-        if(i == 0){
-            showMessage("Error", "No data found");
-        }
-        while (res.moveToNext()){
-            Filiere filiereTemp = new Filiere(res.getString(1),res.getString(2),
-                    res.getString(3),res.getString(4),res.getString(5),
-                    res.getString(6),res.getString(7),res.getString(8));
-            dm.setFiliere(filiereTemp);
-        }
+                dm.insertFiliers();
+//        Cursor res =  db.getAllFilieres();
+//        int i = res.getCount();
+//        if(i == 0){
+//            showMessage("Error", "No data found");
+//        }
+//        while (res.moveToNext()){
+//            Filiere filiereTemp = new Filiere(res.getString(1),res.getString(2),
+//                    res.getString(3),res.getString(4),res.getString(5),
+//                    res.getString(6),res.getString(7),res.getString(8));
+//            dm.setFiliere(filiereTemp);
+//        }
     }
 
     private void load_Niveaux_data() {
@@ -218,5 +251,19 @@ public class MainActivity extends AppCompatActivity{
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
+    }
+
+    /**
+     * @param view       the picker associated with the dialog
+     * @param year       the selected year
+     * @param month      the selected month (0-11 for compatibility with
+     *                   {@link Calendar#MONTH})
+     * @param dayOfMonth the selected day of the month (1-31, depending on
+     */
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        int mon = month + 1;
+        date = "   "+ year + "/" + mon + "/" + dayOfMonth;
+        dat_nais.setText(date);
     }
 }

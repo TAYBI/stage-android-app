@@ -11,7 +11,7 @@ import static com.example.ofppt2.database.OfpptDatabaseContract.*;
 
 public class OfpptOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "ofppt.db";
-    public static final int DATABASE_VERSION = 1;
+    public static int DATABASE_VERSION = 1;
 
 
     public OfpptOpenHelper(@Nullable Context context) {
@@ -22,11 +22,12 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(NiveauEntry.SQL_CREATE_TABLE);
         db.execSQL(SecteurEntry.SQL_CREATE_TABLE);
-        db.execSQL(FiliereEntry.SQL_CREATE_TABLE);
+//        db.execSQL(FiliereEntry.SQL_CREATE_TABLE);
         db.execSQL(UsersEntry.SQL_CREATE_TABLE);
 
         OfpptDataWorker worker = new OfpptDataWorker(db);
-        worker.insertFiliers();
+//        worker.insertFiliers();
+////        insertFiliers();
         worker.insertNivaux();
         worker.insertSecteurs();
     }
@@ -35,9 +36,9 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + NiveauEntry.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + SecteurEntry.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + FiliereEntry.TABLE_NAME);
+//        db.execSQL("DROP TABLE IF EXISTS " + FiliereEntry.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + UsersEntry.TABLE_NAME);
-
+        DATABASE_VERSION += 1;
         onCreate(db);
     }
 
@@ -53,11 +54,11 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         return  res;
     }
 
-    public Cursor getAllFilieres(){
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("SELECT * FROM " + FiliereEntry.TABLE_NAME, null);
-        return  res;
-    }
+//    public Cursor getAllFilieres(){
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        Cursor res = db.rawQuery("SELECT * FROM " + FiliereEntry.TABLE_NAME, null);
+//        return  res;
+//    }
 
     public Cursor getAllUsers(){
         SQLiteDatabase db = this.getReadableDatabase();
