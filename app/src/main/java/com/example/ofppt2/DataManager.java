@@ -91,38 +91,38 @@ public class DataManager {
                         " • Assembler et Intégrer des composants logiciels\n" +
                         " • Réaliser des tests unitaires et tests d’intégration\n" +
                         " • Participer à la mise en exploitation et au support technique de l’application");
-//        insertFiliere("Menuiserie Aluminium","","","","L’Ouvrier Spécialisé en Menuiserie Aluminium est un professionnel capable de réaliser l’assemblage en atelier des cadres en aluminium et de les mettre en place dans les chantiers de construction.",
-//                "L’Ouvrier Spécialisé en Menuiserie Aluminium peut être employé dans une PME ou dans une grande entreprise. Il peut également créer sa propre entreprise.",
-//                        "Age limite : de 15 à 30 ans\n" +
-//                        "\n" +
-//                        "Niveau scolaire minimum requis : 6ème année de l’Enseignement Fondamental et plus\n" +
-//                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
-//                        "\n" +
-//                        " •  Bonne dextérité\n" +
-//                        " •  Méticuleux\n" +
-//                        " •  Esprit créatif\n" +
-//                        "\n" +
-//                        "Contre indications :\n" +
-//                        "\n" +
-//                        " • Troubles moteurs des membres inférieurs ou supérieurs\n" +
-//                        " • Vertige\n" +
-//                        "\n" +
-//                        " • Mode de sélection des candidats :\n" +
-//                        " • Dossier d’orientation à remplir\n" +
-//                        " • Tests d’admission",
-//                        "Le programme de formation est étalé sur 1150 heures dont un stage d’application de 4 mois en entreprise.\n" +
-//                        "\n" +
-//                        "Modules :\n" +
-//                        "\n" +
-//                        " • Métier et formation en menuiserie aluminium\n" +
-//                        " • Aluminium dans le bâtiment\n" +
-//                        " • Les produits verriers\n" +
-//                        " • Devis descriptif, quantitatif, et estimatif.\n" +
-//                        " • Etudes d’une gamme y compris occultation et fermeture\n" +
-//                        " • Fabrication et usinage\n" +
-//                        " • Pose de la menuiserie aluminium sur chantier.\n" +
-//                        " • Plan d’hygiène et de sécurité\n" +
-//                        " • Stage en entreprise");
+        insertFiliere("Menuiserie Aluminium","","","","L’Ouvrier Spécialisé en Menuiserie Aluminium est un professionnel capable de réaliser l’assemblage en atelier des cadres en aluminium et de les mettre en place dans les chantiers de construction.",
+                "L’Ouvrier Spécialisé en Menuiserie Aluminium peut être employé dans une PME ou dans une grande entreprise. Il peut également créer sa propre entreprise.",
+                        "Age limite : de 15 à 30 ans\n" +
+                        "\n" +
+                        "Niveau scolaire minimum requis : 6ème année de l’Enseignement Fondamental et plus\n" +
+                        "Les qualités et aptitudes que le candidat doit posséder :\n" +
+                        "\n" +
+                        " •  Bonne dextérité\n" +
+                        " •  Méticuleux\n" +
+                        " •  Esprit créatif\n" +
+                        "\n" +
+                        "Contre indications :\n" +
+                        "\n" +
+                        " • Troubles moteurs des membres inférieurs ou supérieurs\n" +
+                        " • Vertige\n" +
+                        "\n" +
+                        " • Mode de sélection des candidats :\n" +
+                        " • Dossier d’orientation à remplir\n" +
+                        " • Tests d’admission",
+                        "Le programme de formation est étalé sur 1150 heures dont un stage d’application de 4 mois en entreprise.\n" +
+                        "\n" +
+                        "Modules :\n" +
+                        "\n" +
+                        " • Métier et formation en menuiserie aluminium\n" +
+                        " • Aluminium dans le bâtiment\n" +
+                        " • Les produits verriers\n" +
+                        " • Devis descriptif, quantitatif, et estimatif.\n" +
+                        " • Etudes d’une gamme y compris occultation et fermeture\n" +
+                        " • Fabrication et usinage\n" +
+                        " • Pose de la menuiserie aluminium sur chantier.\n" +
+                        " • Plan d’hygiène et de sécurité\n" +
+                        " • Stage en entreprise");
         insertFiliere("Monteur Dépanneur Frigoriste","xx","x","xx","Le Monteur Dépanneur Frigoriste est un ouvrier chargé d’assurer l’entretien, le dépannage et le montage des installations frigorifiques de petite et moyenne puissance. Il exerce son métier au sein des entreprises d’installation et de maintenance en froid commercial (souvent de petites entreprises à structure légère).",
                 "Le lauréat peut être employé dans les PME ou dans une grande entreprise dans les secteurs industriels les plus divers. Il peut être affecté dans les services techniques du secteur public. Il peut également créer sa propre entreprise.",
                 "Age limite : 30 ans\n" +
