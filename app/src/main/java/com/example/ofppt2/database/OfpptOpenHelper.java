@@ -11,7 +11,7 @@ import static com.example.ofppt2.database.OfpptDatabaseContract.*;
 
 public class OfpptOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "ofppt.db";
-    public static int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 1;
 
 
     public OfpptOpenHelper(@Nullable Context context) {
@@ -38,7 +38,7 @@ public class OfpptOpenHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + SecteurEntry.TABLE_NAME);
 //        db.execSQL("DROP TABLE IF EXISTS " + FiliereEntry.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + UsersEntry.TABLE_NAME);
-        DATABASE_VERSION += 1;
+
         onCreate(db);
     }
 

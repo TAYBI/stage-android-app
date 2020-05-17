@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             @Override
             public void onClick(View v) {
                 add_user();
+
                 Intent intent = new Intent(MainActivity.this, Filiere_info.class);
                 String filereString = mSpinnerFiliere.getSelectedItem().toString();
                 filiere = dm.getFiliere(filereString);

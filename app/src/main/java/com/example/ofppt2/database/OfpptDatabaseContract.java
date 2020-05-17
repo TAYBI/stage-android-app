@@ -70,7 +70,7 @@ public final class OfpptDatabaseContract {
                         COLUMN_CIN + " TEXT UNIQUE NOT NULL, " +
                         COLUMN_NAME + " TEXT NOT NULL, " +
                         COLUMN_LAST_NAME + " TEXT NOT NULL, " +
-                        COLUMN_DATE_NAIS + " TEXT NOT NULL, " +
+                        COLUMN_DATE_NAIS + " DATETIME, " +
                         COLUMN_NIVEAU_SCOLAIRE + " TEXT NOT NULL, " +
                         COLUMN_NIVEAU_FORMATION + " TEXT NOT NULL, " +
                         COLUMN_SECTEURE + " TEXT NOT NULL, " +
