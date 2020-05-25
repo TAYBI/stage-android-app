@@ -19,14 +19,14 @@ public final class OfpptDatabaseContract {
         public static final String SQL_CREATE_TABLE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY, " +
-                        COLUMN_NAME+ " TEXT UNIQUE NOT NULL, " +
-                        COLUMN_NUM_MODULES+ " TEXT UNIQUE NOT NULL, " +
-                        COLUMN_NOM_MODULES + " TEXT NOT NULL, " +
-                        COLUMN_NBR_HORAIRES + " TEXT NOT NULL, " +
-                        COLUMN_DETAILS + " TEXT NOT NULL, " +
-                        COLUMN_DEBOUCHES + " TEXT NOT NULL, " +
-                        COLUMN_CONDITIONS + " TEXT NOT NULL, " +
-                        COLUMN_PROFILE_DE_FORMATION + " TEXT NOT NULL )";
+                        COLUMN_NAME+ " VARCHAR(8000) UNIQUE NOT NULL, " +
+                        COLUMN_NUM_MODULES+ " VARCHAR(8000) UNIQUE NOT NULL, " +
+                        COLUMN_NOM_MODULES + " VARCHAR(8000) NOT NULL, " +
+                        COLUMN_NBR_HORAIRES + " VARCHAR(8000) NOT NULL, " +
+                        COLUMN_DETAILS + " VARCHAR(8000) NOT NULL, " +
+                        COLUMN_DEBOUCHES + " VARCHAR(8000) NOT NULL, " +
+                        COLUMN_CONDITIONS + " VARCHAR(8000) NOT NULL, " +
+                        COLUMN_PROFILE_DE_FORMATION + " VARCHAR(8000) NOT NULL )";
     }
 
     public static final class NiveauEntry implements BaseColumns {
@@ -37,8 +37,8 @@ public final class OfpptDatabaseContract {
         public static final String SQL_CREATE_TABLE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY, " +
-                        COLUMN_NAME + " TEXT NOT NULL, " +
-                        COLUMN_SECTEURS + " TEXT NOT NULL )" ;
+                        COLUMN_NAME + " VARCHAR(8000) NOT NULL, " +
+                        COLUMN_SECTEURS + " VARCHAR(8000) NOT NULL )" ;
     }
 
     public static final class SecteurEntry implements BaseColumns {
@@ -49,8 +49,8 @@ public final class OfpptDatabaseContract {
         public static final String SQL_CREATE_TABLE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY, " +
-                        COLUMN_NAME + " TEXT NOT NULL, " +
-                        COLUMN_FILIERES + " TEXT NOT NULL )" ;
+                        COLUMN_NAME + " VARCHAR(8000) NOT NULL, " +
+                        COLUMN_FILIERES + " VARCHAR(8000) NOT NULL )" ;
     }
 
     public static final class UsersEntry implements BaseColumns {

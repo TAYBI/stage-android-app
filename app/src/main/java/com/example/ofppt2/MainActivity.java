@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             String dn = dat_nais.getText().toString().substring(3);
              db.insertUser(cin.getText().toString(), prenom.getText().toString(), nom.getText().toString(), dn,
                     mSpinnerNiveauScolaire.getSelectedItem().toString(),
-                    mSpinnerNiveauFormation.getSelectedItem().toString(),
+                    mSpinnerNiveauFormation.getSelectedItem().  toString(),
                     mSpinnerSecteur.getSelectedItem().toString(),
                     mSpinnerFiliere.getSelectedItem().toString());
         }
